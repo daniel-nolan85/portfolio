@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>NolanCode Blog - JavaScript MutationObservers</title>
+  </head>
+  <body>
+    <!--
+***     **     *    **  *   *    *   ***   *   * **   * ***   *   
+   *   **_   _  *   *_   *   **   *    ***  *   **  *_ ***  *   **
+ **   * | \ | | ___ | | ___ _ _ __   ___  ___   __  | | ___ **   * *
+ *   *  |  \| |/ _ \| |/ _ ` | `  \ / __|/ _ \ / _ `| |/ _ \  *  **
+   ***  | |\  | |_| | | |_|  | |`| | |__| |_| | |_|   |  __/ *      *
+ *    **|_| \_|\___/|_|\___,_|_| |_|\___|\___/ \___,|_|\___| ** * *
+ ***     **   *     ***  **   *  *   **  ***  **  **  *    **  * *
+      *    *    **     *    ***  *    * **    *      *    *     *
+
+Hey there! Wanna change the world?
+Let's do something really BIG together?
+Get in touch down below or drop me a direct email at daniel@nolancode.com with the word 'Gamechangers' in the subject.
+Look forward to hearing from you!
+-->
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-xl navbar-light fixed-top py-3"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html"
+          >Nolancode</a
+        >
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#about"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#services"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#blog"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link js-scroll-trigger"
+                href="index.html#testimonials"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#contact"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="btn btn-primary text-white nav-link js-scroll-trigger px-3"
+                href="index.html#hireme"
+                >Hire Me</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="individual-blog section">
+      <div class="section-container">
+        <div class="section-header">
+          <h3 class="title heading text-uppercase" data-title="My Posts">
+            My blog
+          </h3>
+          <p class="text">
+            If there's a JavaScript related topic you'd like to see covered
+            here, please get in touch
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="individual-blog-header">
+      <h3 class="title heading">JavaScript MutationObserver</h3>
+      <h4 class="text">Getting to know the JavaScript MutationObserver API</h4>
+    </section>
+
+    <hr />
+    <section class="content-container">
+      <div class="top-content">
+        <div class="featured-article">
+          <div class="img">
+            <img src="img/mutation-observer-rect.png" alt="" />
+          </div>
+          <br />
+          <br />
+          <p class="text">
+            Recently I was building a site for a client who wanted two modal pop
+            ups on a page. One was to promote an open day event and was
+            activated by the user onclick, while the other was to encourage
+            users to sign up for a newsletter and was triggered by setTimeout,
+            30 seconds after page load.
+          </p>
+          <br />
+          <p class="text">
+            The issue I faced with this was that if the open day modal was
+            already on show at the point the signup modal was fired, they would
+            both appear onscreen together, freezing the page and resulting in a
+            frustrating user experience.
+          </p>
+          <br />
+          <h4 class="heading">So, what was the solution?</h4>
+          <br />
+          <p class="text">
+            My first thought was that I needed a way for the signup modal to
+            check if the open day modal was already onscreen before it displayed
+            itself, and if it was then I needed it to remain hidden. As I was
+            using Bootstrap modals this was easily achieved with a simple
+            <span class="code">if</span>
+            statement, making use of Bootstrap's inbuilt
+            <span class="code">show</span> class:
+          </p>
+          <br />
+          <p class="code">
+            document.onreadystatechange = function () { <br />
+            &nbsp;&nbsp;setTimeout(() => { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;if (!odModal.classList.contains('show')) {
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;suModal.show(); <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;} <br />
+            &nbsp;&nbsp;}, 30000); <br />
+            };
+          </p>
+          <br />
+          <p class="text">
+            However, when this was the case, the result was that the signup
+            modal would never be shown to the user, so this was not an
+            acceptable outcome. I realized I needed a way for the signup modal
+            to listen for when the open day modal had become hidden again, and
+            then it could reveal itself after that. It was at this point that I
+            realized how handy a JavaScript event listener for class changes
+            would be, but that one didn't exist, so I had to find another way.
+          </p>
+          <br />
+          <p class="text">
+            Upon further research I came across the
+            <span class="code"
+              ><a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver"
+                target="_blank"
+                >MutationObserver API</a
+              ></span
+            >, a constructor that allows your program to watch for changes being
+            made to the DOM tree. Sounds perfect! So let's explore how it works.
+          </p>
+          <br />
+          <p class="code">
+            function onClassChange(element, callback) { <br />
+            &nbsp;&nbsp;const observer = new MutationObserver((mutations) => {
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}); <br />
+            }
+          </p>
+          <br />
+          <p class="text">
+            First, we create a function to watch for a class change, it takes
+            the element we are interested in, and a callback function as its
+            parameters. Then we create a new constructor which will keep track
+            of every mutation to the element, and later loop through them and
+            perform a check on each. A <span class="code">forEach</span> method
+            and <span class="code">if</span> statement would accomplish this for
+            us:
+          </p>
+          <br />
+          <p class="code">
+            const observer = new MutationObserver((mutations) => { <br />
+            &nbsp;&nbsp;mutations.forEach((mutation) => { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;if ( <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mutation.type === 'attributes'
+            && <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mutation.attributeName ===
+            'class' <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;) { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;callback(mutation.target);
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;} <br />
+            &nbsp;&nbsp;}); <br />
+            });
+          </p>
+          <br />
+          <p class="text">
+            We specify the changes we want to explicitly watch for by using the
+            Mutation objects built in properties,
+            <span class="code">type</span> and
+            <span class="code">attributeName</span>. If the element contains an
+            attribute with the value of <span class="code">class</span>, then we
+            know that there must have been a change to the elements class name.
+          </p>
+          <br />
+          <p class="text">
+            The next step is to call our observer's built-in
+            <span class="code">observe()</span> method which takes two
+            arguments, the node target and an optional object for options. Here
+            we set <span class="code">attributes</span> to true to watch for
+            changes to the value of attributes on the node we are monitoring:
+          </p>
+          <br />
+          <p class="code">observer.observe(element, { attributes: true });</p>
+          <br />
+          <p class="text">
+            We then call our observer's
+            <span class="code">disconnect()</span> method to stop it from
+            receiving further notifications:
+          </p>
+          <br />
+          <p class="code">return observer.disconnect;</p>
+          <br />
+          <p class="text">Our complete function should look like this:</p>
+          <br />
+          <p class="code">
+            function onClassChange(element, callback) { <br />
+            &nbsp;&nbsp;const observer = new MutationObserver((mutations) => {
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;mutations.forEach((mutation) => { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ( <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mutation.type ===
+            'attributes' && <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mutation.attributeName
+            === 'class' <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;callback(mutation.target);
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}); <br />
+            &nbsp;&nbsp;}); <br />
+            &nbsp;&nbsp;observer.observe(element, { attributes: true }); <br />
+            &nbsp;&nbsp;return observer.disconnect; <br />
+            }
+          </p>
+          <br />
+          <p class="text">
+            Finally, we need to call our function, giving it the element to
+            watch (saved as a variable), and the outcome we want to achieve
+            (performed as a callback). Here we just use a ternary operator to
+            display our signup modal 1 second after the class of
+            <span class="code">show</span> has been removed from the open day
+            modal:
+          </p>
+          <br />
+          <p class="code">
+            onClassChange(odModal, (node) => { <br />
+            &nbsp;&nbsp;node.classList.contains('show') <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;? '' <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;: setTimeout(() => { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;suModal.show(); <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}, 1000); <br />
+            });
+          </p>
+          <br />
+          <p class="text">And that's it. Happy days!</p>
+        </div>
+      </div>
+
+      <div class="bottom-content">
+        <div class="avatar-content">
+          <img src="img/me.jpg" alt="" />
+          <p class="author-caption text">
+            Daniel Nolan is a full-stack JavaScript developer who has been
+            writing code since 2019. His blog articles share the knowledge and
+            skills he has learned related to JavaScript and ReactJS coding
+            techniques.
+          </p>
+        </div>
+        <hr />
+        <div class="popular-posts-section">
+          <h5 class="heading">POPULAR POSTS</h5>
+          <div class="popular-posts">
+            <div class="popular-post">
+              <a href="array_methods.html">
+                <img src="img/array-methods-sq.png" alt="" />
+                <p class="caption">JavaScript Array Methods</p>
+              </a>
+            </div>
+            <div class="popular-post">
+              <a href="context_api.html">
+                <img src="img/context-api-sq.png" alt="" />
+                <p class="caption">React Context API</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="https://www.buymeacoffee.com/nolancode"
+        target="_blank"
+        class="buymeacoffee"
+      >
+        <img src="img/buy-me-a-coffee.png" alt="buy me a coffee" />
+      </a>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="grid-4">
+          <div class="grid-4-col footer-about">
+            <h3 class="title-sm">About</h3>
+            <p class="text">
+              Nolancode can work with you and help to create your next project.
+            </p>
+          </div>
+
+          <div class="grid-4-col footer-links">
+            <h3 class="title-sm">Links</h3>
+            <ul>
+              <li>
+                <a href="index.html#about">About</a>
+              </li>
+              <li>
+                <a href="index.html#services">Services</a>
+              </li>
+              <li>
+                <a href="index.html#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="index.html#blog">Blog</a>
+              </li>
+              <li>
+                <a href="index.html#testimonials">Testimonials</a>
+              </li>
+              <li>
+                <a href="index.html#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid-4-col footer-links">
+            <h3 class="title-sm">Services</h3>
+            <ul>
+              <li>
+                <a href="#" data-toggle="modal" data-target="#webDesign"
+                  >Web Design</a
+                >
+              </li>
+              <li>
+                <a href="#" data-toggle="modal" data-target="#webDev"
+                  >Web Dev</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid-4-col footer-newstletter" id="subscribe-form">
+            <h3 class="title-sm">Subscribe</h3>
+            <p class="text">
+              To become notified when any new blog posts and projects are
+              released.
+            </p>
+            <form action="subscribe.php">
+              <div class="footer-input-wrap">
+                <div class="hidden-container">
+                  <input
+                    class="hide"
+                    name="subscribe"
+                    autocomplete="false"
+                    tabindex="-1"
+                  />
+                </div>
+                <input
+                  type="text"
+                  class="footer-input"
+                  placeholder="Email"
+                  id="subscribe-email"
+                  name="subscribe-email"
+                />
+                <a
+                  type="submit"
+                  onclick="validateSubscribe()"
+                  class="input-arrow"
+                >
+                  <i class="fas fa-angle-right"></i>
+                </a>
+              </div>
+              <span id="subscribe-status" class="text"></span><br />
+            </form>
+          </div>
+        </div>
+
+        <div class="bottom-footer">
+          <div class="copyright">
+            <p class="text">
+              <a href="http://nolancode.com/" target="_blank" class="heading"
+                >Nolancode</a
+              >
+              -
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+            </p>
+          </div>
+
+          <div class="followme-wrap">
+            <div class="followme">
+              <h3>Follow me</h3>
+              <span class="footer-line"></span>
+              <div class="social-media">
+                <a href="https://twitter.com/Nolan_code" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/nolan_code" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/daniel-nolan85"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="back-btn-wrap">
+              <a href="#" class="back-btn">
+                <i class="fas fa-chevron-up"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Web Design Modal -->
+    <div
+      class="modal fade"
+      id="webDesign"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Web Design</h3>
+            <p class="text">
+              My mission as a designer is to work closely with each customer to
+              make sure their websites align with their brand's identity. Using
+              various methods and latest technologies to create GUI elements
+              such as menus, tables, forms and widgets.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Web Development Modal -->
+    <div
+      class="modal fade"
+      id="webDev"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Web Development</h3>
+            <p class="text">
+              My mission on the back end is to develop, maintain, test and debug
+              the core of the application. Focusing on the server, database and
+              API integration, and ensuring a high level of security for
+              authorisation and data protection is applied.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Isotope JS -->
+    <script src="isotope.pkgd.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Custom JS-->
+    <script src="script.js"></script>
+  </body>
+</html>

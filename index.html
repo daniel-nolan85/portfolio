@@ -1,0 +1,1824 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>NolanCode</title>
+  </head>
+
+  <body>
+    <!--
+***     **     *    **  *   *    *   ***   *   * **   * ***   *   
+   *   **_   _  *   *_   *   **   *    ***  *   **  *_ ***  *   **
+ **   * | \ | | ___ | | ___ _ _ __   ___  ___   __  | | ___ **   * *
+ *   *  |  \| |/ _ \| |/ _ ` | `  \ / __|/ _ \ / _ `| |/ _ \  *  **
+   ***  | |\  | |_| | | |_|  | |`| | |__| |_| | |_|   |  __/ *      *
+ *    **|_| \_|\___/|_|\___,_|_| |_|\___|\___/ \___,|_|\___| ** * *
+ ***     **   *     ***  **   *  *   **  ***  **  **  *    **  * *
+      *    *    **     *    ***  *    * **    *      *    *     *
+
+Hey there! Wanna change the world?
+Let's do something really BIG together?
+Get in touch down below or drop me a direct email at daniel@nolancode.com with the word 'Gamechangers' in the subject.
+Look forward to hearing from you!
+-->
+    <main>
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-expand-xl navbar-light fixed-top py-3"
+        id="mainNav"
+      >
+        <div class="container">
+          <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top"
+            >Nolancode</a
+          > -->
+          <a href="#page-top" class="js-scroll-trigger">
+            <section id="solar-system">
+              <div id="sun">
+                <div class="text">
+                  <span class="first-letter">N</span>
+                  <span class="last-letters">lancode</span>
+                </div>
+              </div>
+              <article id="mercury-trajectory">
+                <div id="mercury"></div>
+              </article>
+            </section>
+          </a>
+          <button
+            class="navbar-toggler navbar-toggler-right"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#services"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#portfolio"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#testimonials"
+                  >Testimonials</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contact"
+                  >Contact</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-primary text-white nav-link js-scroll-trigger px-3"
+                  href="#hireme"
+                  >Hire Me</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Masthead-->
+      <header class="masthead" id="page-top">
+        <div class="container h-100">
+          <div
+            class="row h-100 align-items-center justify-content-center text-center"
+          >
+            <div class="col-lg-10 align-self-end">
+              <div class="section-header">
+                <h1
+                  class="title heading text-uppercase text-white font-weight-bold"
+                >
+                  Daniel Nolan
+                </h1>
+              </div>
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+              <p class="heading text-white-75 mb-5">
+                Crafting Digital Experiences: Websites and Mobile Apps Tailored
+                to Your Vision
+              </p>
+              <a
+                class="heading btn btn-primary js-scroll-trigger"
+                href="Daniel Nolan Resume.pdf"
+                target="_blank"
+                >View Resume</a
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- About-->
+      <section class="about section" id="about">
+        <div class="section-container">
+          <div class="section-header">
+            <h3 class="title heading text-uppercase" data-title="Who I Am">
+              About me
+            </h3>
+          </div>
+
+          <div class="section-body grid-2">
+            <div class="column-1">
+              <h3 class="title-sm">Hi, I'm Daniel</h3>
+              <p class="text">
+                A full stack software developer since 2019. Highly proficient
+                with JavaScript ES6 and libraries such as jQuery and ReactJS.
+                Advanced skills in NodeJS and Express, and working with
+                non-relational database systems such as MongoDB. Excellent
+                skills in CSS and working with styling frameworks such as
+                Bootstrap and Ant Design. Familiar with Python and in particular
+                the Django framework. Knowledgeable with version control systems
+                such as Git. Experience hosting with providers such as
+                Dreamhost, Netlify, Heroku, and Digital Ocean. Exposure to PHP
+                in relation to building secure email submission forms.
+              </p>
+            </div>
+
+            <div class="column-2 image">
+              <img src="img/me.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div id="html" class="moving"><i class="fab fa-html5"></i></div>
+        <div id="css" class="moving"><i class="fab fa-css3"></i></div>
+        <div id="scss" class="moving"><i class="fab fa-sass"></i></div>
+        <div id="bootstrap" class="moving">
+          <i class="fab fa-bootstrap"></i>
+        </div>
+        <div id="js" class="moving"><i class="fab fa-js-square"></i></div>
+        <div id="react" class="moving"><i class="fab fa-react"></i></div>
+        <div id="node" class="moving"><i class="fab fa-node"></i></div>
+        <div id="npm" class="moving"><i class="fab fa-npm"></i></div>
+        <div id="python" class="moving"><i class="fab fa-python"></i></div>
+        <div id="php" class="moving"><i class="fab fa-php"></i></div>
+        <div id="git" class="moving"><i class="fab fa-github"></i></div>
+        <div id="digoc" class="moving">
+          <i class="fab fa-digital-ocean"></i>
+        </div>
+      </section>
+
+      <!-- Services-->
+      <section class="services section" id="services">
+        <div class="section-container">
+          <div class="section-header">
+            <h3 class="title heading text-uppercase" data-title="What I Do">
+              Services
+            </h3>
+            <p class="text">
+              As a full stack software developer, I offer services in three main
+              categories...
+            </p>
+          </div>
+
+          <div class="services-cards">
+            <div class="services-card-wrap">
+              <div class="services-card" data-card="UI/UX">
+                <div class="services-card-content z-index">
+                  <i class="fas fa-pencil-ruler icon"></i>
+                  <h3 class="heading title-sm">Front End Design</h3>
+                  <p class="text">
+                    The look and feel of a website. How easy it is to navigate
+                    and interact with.
+                  </p>
+                  <a
+                    href="#"
+                    class="heading btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#webDesign"
+                    >Learn more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="services-card-wrap">
+              <div class="services-card" data-card="Code">
+                <div class="services-card-content z-index">
+                  <i class="fas fa-laptop-code icon"></i>
+                  <h3 class="heading title-sm">Back End Development</h3>
+                  <p class="text">
+                    The functionality of a website. Security and efficiency are
+                    paramount.
+                  </p>
+                  <a
+                    href="#"
+                    class="heading btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#webDev"
+                    >Learn more</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="services-card-wrap">
+              <div class="services-card" data-card="Mobile">
+                <div class="services-card-content z-index">
+                  <i class="fas fa-mobile icon"></i>
+                  <h3 class="heading title-sm">Mobile App Creation</h3>
+                  <p class="text">
+                    Crafting cross-platform mobile applications for iOS and
+                    Android.
+                  </p>
+                  <a
+                    href="#"
+                    class="heading btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#appCreation"
+                    >Learn more</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio-->
+      <section class="portfolio section" id="portfolio">
+        <div class="background-bg">
+          <div class="overlay overlay-sm"></div>
+        </div>
+
+        <div class="section-container">
+          <div class="section-header">
+            <h3 class="title heading text-uppercase" data-title="My Work">
+              Portfolio
+            </h3>
+          </div>
+
+          <div class="section-body">
+            <div class="filter">
+              <button class="filter-btn active" data-filter="*">All</button>
+              <button class="filter-btn" data-filter=".mern">MERN Apps</button>
+              <button class="filter-btn" data-filter=".mobile">
+                Mobile Apps
+              </button>
+              <button class="filter-btn" data-filter=".land">
+                Landing Page
+              </button>
+              <button class="filter-btn" data-filter=".ecom">E-commerce</button>
+            </div>
+
+            <div class="grid">
+              <div class="grid-item mern">
+                <div class="gallery-image">
+                  <img src="img/creaite.png" alt="" />
+                  <div class="img-overlay">
+                    <a href="https://creaite.media/" target="_blank">
+                      <div class="plus"></div>
+                    </a>
+                    <div class="img-description">
+                      <a href="https://creaite.media/" target="_blank">
+                        <h3>CreAIte</h3>
+                      </a>
+                      <div class="icons">
+                        <i
+                          class="fas fa-info-circle"
+                          data-toggle="modal"
+                          data-target="#creaite"
+                        ></i>
+                        <a
+                          href="https://github.com/daniel-nolan85/CreAIte-front"
+                          target="_blank"
+                        >
+                          <i class="fas fa-code"></i
+                        ></a>
+                        <a
+                          href="https://github.com/daniel-nolan85/CreAIte-back"
+                          target="_blank"
+                        >
+                          <i class="fas fa-code"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item land">
+                <div class="gallery-image">
+                  <img src="img/legal-mockup.png" alt="" />
+                  <div class="img-overlay">
+                    <a
+                      href="https://daniel-nolan85.github.io/legal-mockup/"
+                      target="_blank"
+                    >
+                      <div class="plus"></div>
+                    </a>
+                    <div class="img-description">
+                      <a
+                        href="https://daniel-nolan85.github.io/legal-mockup/"
+                        target="_blank"
+                      >
+                        <h3>Legal Mockup</h3>
+                      </a>
+                      <div class="icons">
+                        <i
+                          class="fas fa-info-circle"
+                          data-toggle="modal"
+                          data-target="#legalMockup"
+                        ></i>
+                        <a
+                          href="https://github.com/daniel-nolan85/legal-mockup"
+                          target="_blank"
+                        >
+                          <i class="fas fa-code"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item mern mobile">
+                <div class="gallery-image">
+                  <img src="img/nova-quest.png" alt="" />
+                  <div class="img-overlay">
+                    <a href="#" id="project-link" target="_blank">
+                      <div class="plus"></div>
+                    </a>
+                    <div class="img-description">
+                      <a href="#" id="project-title-link" target="_blank">
+                        <h3>NovaQuest</h3>
+                      </a>
+                      <div class="icons">
+                        <i
+                          class="fas fa-info-circle"
+                          data-toggle="modal"
+                          data-target="#novaquest"
+                        ></i>
+                        <a
+                          href="https://github.com/daniel-nolan85/novaquest-front.git"
+                          target="_blank"
+                        >
+                          <i class="fas fa-code"></i
+                        ></a>
+                        <a
+                          href="https://github.com/daniel-nolan85/novaquest-back.git"
+                          target="_blank"
+                        >
+                          <i class="fas fa-code"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item mern mobile ecom">
+                <div class="gallery-image">
+                  <img src="img/liic.png" alt="" />
+                  <div class="img-overlay">
+                    <a href="https://www.loveisincyprus.com" target="_blank">
+                      <div class="plus"></div>
+                    </a>
+                    <div class="img-description">
+                      <a href="https://www.loveisincyprus.com" target="_blank">
+                        <h3>Love Is In Cyprus</h3>
+                      </a>
+                      <div class="icons">
+                        <i
+                          class="fas fa-info-circle"
+                          data-toggle="modal"
+                          data-target="#loveIsInCyprus"
+                        ></i>
+                        <a
+                          href="https://github.com/daniel-nolan85/loveisincyprus-front"
+                          target="_blank"
+                        >
+                          <i class="fas fa-code"></i
+                        ></a>
+                        <a
+                          href="https://github.com/daniel-nolan85/loveisincyprus-back"
+                          target="_blank"
+                        >
+                          <i class="fas fa-code"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item ecom">
+                <div class="gallery-image">
+                  <img src="img/nolan-clothing.png" alt="" />
+                  <div class="img-overlay">
+                    <a
+                      href="https://nolan-clothing.netlify.app/"
+                      target="_blank"
+                    >
+                      <div class="plus"></div>
+                    </a>
+                    <div class="img-description">
+                      <a
+                        href="https://nolan-clothing.netlify.app/"
+                        target="_blank"
+                      >
+                        <h3>Nolan Clothing</h3>
+                      </a>
+                      <div class="icons">
+                        <i
+                          class="fas fa-info-circle"
+                          data-toggle="modal"
+                          data-target="#nolanClothing"
+                        ></i>
+                        <a
+                          href="https://github.com/daniel-nolan85/nolan-clothing"
+                          target="_blank"
+                        >
+                          <i class="fas fa-code"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item land">
+                <div class="gallery-image">
+                  <img src="img/jenn-jenn-wellness.png" alt="" />
+                  <div class="img-overlay">
+                    <a href="https://jennjennwellness.com/" target="_blank">
+                      <div class="plus"></div>
+                    </a>
+                    <div class="img-description">
+                      <a href="https://jennjennwellness.com/" target="_blank">
+                        <h3>Jenn-Jenn Wellness</h3>
+                      </a>
+                      <div class="icons">
+                        <i
+                          class="fas fa-info-circle"
+                          data-toggle="modal"
+                          data-target="#jennJennWellness"
+                        ></i>
+                        <a href="https://github.com/" target="_blank">
+                          <i class="fas fa-code"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item land">
+                <div class="gallery-image">
+                  <img src="img/milowe.png" alt="" />
+                  <div class="img-overlay">
+                    <a href="https://www.milowe.co.uk/" target="_blank">
+                      <div class="plus"></div>
+                    </a>
+                    <div class="img-description">
+                      <a href="https://www.milowe.co.uk/" target="_blank">
+                        <h3>Milowe</h3>
+                      </a>
+                      <div class="icons">
+                        <i
+                          class="fas fa-info-circle"
+                          data-toggle="modal"
+                          data-target="#milowe"
+                        ></i>
+                        <a
+                          href="https://github.com/daniel-nolan85/milowe"
+                          target="_blank"
+                        >
+                          <i class="fas fa-code"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item land">
+                <div class="gallery-image">
+                  <img src="img/green-point.png" alt="" />
+                  <div class="img-overlay">
+                    <a
+                      href="https://daniel-nolan85.github.io/green-point/"
+                      target="_blank"
+                    >
+                      <div class="plus"></div>
+                    </a>
+                    <div class="img-description">
+                      <a
+                        href="https://daniel-nolan85.github.io/green-point/"
+                        target="_blank"
+                      >
+                        <h3>Green Point</h3>
+                      </a>
+                      <div class="icons">
+                        <i
+                          class="fas fa-info-circle"
+                          data-toggle="modal"
+                          data-target="#greenPoint"
+                        ></i>
+                        <a
+                          href="https://github.com/daniel-nolan85/green-point"
+                          target="_blank"
+                        >
+                          <i class="fas fa-code"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item land">
+                <div class="gallery-image">
+                  <img src="img/gbacademy.jpg" alt="" />
+                  <div class="img-overlay">
+                    <a
+                      href="https://daniel-nolan85.github.io/the-gents-of-brooklyn-academy/"
+                      target="_blank"
+                    >
+                      <div class="plus"></div>
+                    </a>
+                    <div class="img-description">
+                      <a
+                        href="https://daniel-nolan85.github.io/the-gents-of-brooklyn-academy/"
+                        target="_blank"
+                      >
+                        <h3>Gents of Brooklyn</h3>
+                      </a>
+                      <div class="icons">
+                        <i
+                          class="fas fa-info-circle"
+                          data-toggle="modal"
+                          data-target="#gbacademy"
+                        ></i>
+                        <a
+                          href="https://github.com/daniel-nolan85/the-gents-of-brooklyn-academy"
+                          target="_blank"
+                        >
+                          <i class="fas fa-code"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item mern land">
+                <div class="gallery-image">
+                  <img src="img/apex-scrap.png" alt="" />
+                  <div class="img-overlay">
+                    <a href="https://apex-scrap.netlify.app/" target="_blank">
+                      <div class="plus"></div>
+                    </a>
+                    <div class="img-description">
+                      <a href="https://apex-scrap.netlify.app/" target="_blank">
+                        <h3>Apex Scrap</h3>
+                      </a>
+                      <div class="icons">
+                        <i
+                          class="fas fa-info-circle"
+                          data-toggle="modal"
+                          data-target="#apexScrap"
+                        ></i>
+                        <a
+                          href="https://github.com/daniel-nolan85/apex-scrap"
+                          target="_blank"
+                        >
+                          <i class="fas fa-code"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="gallery-image">
+                  <img src="img/next.jpg" alt="" />
+                  <div class="img-overlay">
+                    <div class="img-description">
+                      <h3>
+                        Want your website to be displayed here? <br />
+                        Get in touch.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="gallery-image">
+                  <img src="img/more.jpg" alt="" />
+                  <div class="img-overlay">
+                    <div class="img-description">
+                      <h3>More projects coming soon...</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog -->
+      <section class="blog section" id="blog">
+        <div class="section-container">
+          <div class="section-header">
+            <h3 class="title heading text-uppercase" data-title="My Posts">
+              My blog
+            </h3>
+            <p class="text">
+              If there's a JavaScript related topic you'd like to see covered
+              here, please get in touch
+            </p>
+          </div>
+          <div class="blog-wrapper">
+            <div class="blog-wrap">
+              <div class="blog-card">
+                <div class="blog-image">
+                  <a href="array_methods.html">
+                    <img src="img/array-methods-rect.png" alt="" />
+                  </a>
+                </div>
+                <div class="blog-content">
+                  <div class="blog-info">
+                    <h5 class="blog-date">January, 31 2022</h5>
+                  </div>
+                  <h3 class="title-sm">JavaScript Array Methods</h3>
+                  <p class="blog-text">
+                    A brief overview of methods that can be applied to a
+                    JavaScript array.
+                  </p>
+                  <a href="array_methods.html" class="heading btn btn-primary">
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="blog-wrap">
+              <div class="blog-card">
+                <div class="blog-image">
+                  <a href="context_api.html">
+                    <img src="img/context-api-rect.png" alt="" />
+                  </a>
+                </div>
+                <div class="blog-content">
+                  <div class="blog-info">
+                    <h5 class="blog-date">February, 01 2022</h5>
+                  </div>
+                  <h3 class="title-sm">React Context API</h3>
+                  <p class="blog-text">
+                    Exploring how to manage state using React's Context API.
+                  </p>
+                  <a href="context_api.html" class="heading btn btn-primary">
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="blog-wrap">
+              <div class="blog-card">
+                <div class="blog-image">
+                  <a href="mutation_observer.html">
+                    <img src="img/mutation-observer-rect.png" alt="" />
+                  </a>
+                </div>
+                <div class="blog-content">
+                  <div class="blog-info">
+                    <h5 class="blog-date">February, 02 2022</h5>
+                  </div>
+                  <h3 class="title-sm">JavaScript MutationObserver</h3>
+                  <p class="blog-text">
+                    Getting to know the JavaScript MutationObserver API.
+                  </p>
+                  <a
+                    href="mutation_observer.html"
+                    class="heading btn btn-primary"
+                  >
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials section" id="testimonials">
+        <div class="section-container">
+          <div class="section-header">
+            <h3
+              class="title heading text-uppercase"
+              data-title="What Others Have Said"
+            >
+              Testimonials
+            </h3>
+          </div>
+
+          <div class="testi-content grid-2">
+            <div class="column-1 reviews">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="review-text">
+                      Daniel has successfully developed my Website and PWA, and
+                      solved the technical challenges and unexpected issues that
+                      rose along the course, he was always proactive in both
+                      setting up video calls to review every completed tasks,
+                      and securing and test-proving every stage of the
+                      development in order to deliver a flawless work.
+                    </p>
+                    <p class="review-text">
+                      Daniel works through a precise and well-organised
+                      interactive methodology with the client so that nothing is
+                      missed from the to-do lists that he systematically
+                      composes following talks with him, and that he will update
+                      or revise depending or according to new situations or to
+                      some unexpected changes in the client's strategy.
+                    </p>
+
+                    <div class="review-info">
+                      <h3 class="review-name">William Wolf</h3>
+                      <h5 class="review-job">
+                        Founder & CEO, Love is in Cyprus
+                      </h5>
+                    </div>
+                  </div>
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="review-text">
+                      Daniel helped me launch my brand and had amazing ideas on
+                      how to design my website that was functional for me. He
+                      was extremely responsive, had great insight as well as
+                      patience when explaining functionality. Cheers Daniel
+                      thanks for helping me get my brand off the ground.
+                    </p>
+
+                    <div class="review-info">
+                      <h3 class="review-name">Jennifer Justice</h3>
+                      <h5 class="review-job">CEO, Jenn-Jenn Wellness</h5>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="review-text">
+                      I have used Daniel to construct two of my websites to
+                      which he has followed the spec I supplied and also
+                      introduced me to different innovations along the way.
+                      Daniel has provided me and continues to provide an
+                      excellent service to update and maintain my sites. Daniel
+                      is always on hand when I require his assistance and
+                      supports my team very well.
+                    </p>
+
+                    <div class="review-info">
+                      <h3 class="review-name">Michael Knapton</h3>
+                      <h5 class="review-job">
+                        Director, Gents of Brooklyn Academy & Green Point
+                      </h5>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide review">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="rate">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="review-text">
+                      I hired Daniel as a Frontend developer at Edenred. Daniel
+                      showed passion and dedication in his craft as a developer
+                      and turned out to be a great team member, being able to
+                      communicate efficiently and accurately to the different
+                      stakeholders and showing constant curiosity toward his
+                      learning process and development as a professional. He
+                      would definitely be adding value to any organization that
+                      would decide to take him in.
+                    </p>
+
+                    <div class="review-info">
+                      <h3 class="review-name">Giovanni Capuano</h3>
+                      <h5 class="review-job">
+                        Senior Front End Developer, Edenred
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="review-nav swiper-button-prev">
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+                <div class="review-nav swiper-button-next">
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="column-2 image">
+              <img src="img/testi.jpg" alt="" class="img-element" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact-->
+      <section class="contact" id="contact">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25815.691882122384!2d-114.98356966101072!3d36.021233907912276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1691616546140!5m2!1sen!2sus"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+        <div class="section-container">
+          <div class="contact-box">
+            <div class="contact-info">
+              <h3 class="title heading text-uppercase">Get in touch</h3>
+              <p class="text">
+                If you'd like to contact me with any comments or questions you
+                can send me a direct message here, or alternatively, send an
+                email to the address below.
+              </p>
+              <div class="information-wrap">
+                <div class="information">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <p class="info-text">Henderson, Nevada, 89012</p>
+                </div>
+
+                <div class="information">
+                  <div class="contact-icon">
+                    <i class="fas fa-paper-plane"></i>
+                  </div>
+                  <p class="info-text">
+                    <a
+                      href="mailto:daniel@nolancode.com?subject = Feedback&body = Message"
+                    >
+                      daniel@nolancode.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form" id="contact-form">
+              <h3 class="title heading text-uppercase">Direct Message</h3>
+              <form action="mail.php">
+                <div class="row">
+                  <div class="hidden-container">
+                    <input
+                      class="hide"
+                      name="daniel"
+                      autocomplete="false"
+                      tabindex="-1"
+                    />
+                  </div>
+                  <input
+                    type="text"
+                    class="contact-input"
+                    placeholder="First Name"
+                    id="first"
+                    name="first"
+                  />
+                  <input
+                    type="text"
+                    class="contact-input"
+                    placeholder="Last Name"
+                    id="last"
+                    name="last"
+                  />
+                </div>
+
+                <div class="row">
+                  <input
+                    type="text"
+                    class="contact-input"
+                    placeholder="Email"
+                    id="email"
+                    name="email"
+                  />
+                  <input
+                    type="text"
+                    class="contact-input"
+                    placeholder="Subject"
+                    id="subject"
+                    name="subject"
+                  />
+                </div>
+
+                <div class="row">
+                  <textarea
+                    class="contact-input textarea"
+                    placeholder="Message"
+                    id="message"
+                    name="message"
+                  ></textarea>
+                </div>
+                <span id="status" class="text"></span><br />
+                <a
+                  type="submit"
+                  onclick="validateForm()"
+                  class="heading btn btn-primary"
+                  >Send</a
+                >
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hireme" id="hireme">
+        <div class="section-container">
+          <h3 class="title heading text-uppercase">
+            Let's talk about a project
+          </h3>
+          <p class="text">
+            Have an idea for a startup or need a new site for your business?
+            Whether you have a vision in mind already or are in need of some
+            inspiration, I can help you with all your web-based creations. Hit
+            the button below now and let's get started!
+          </p>
+          <a
+            href="#"
+            class="heading btn btn-primary"
+            data-toggle="modal"
+            data-target="#hire-me"
+            >Hire Me</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- Web Design Modal -->
+    <div
+      class="modal fade"
+      id="webDesign"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Web Design</h3>
+            <p class="text">
+              My mission as a designer is to work closely with each customer to
+              make sure their websites align with their brand's identity. Using
+              various methods and latest technologies to create GUI elements
+              such as menus, tables, forms and widgets.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Web Development Modal -->
+    <div
+      class="modal fade"
+      id="webDev"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Web Development</h3>
+            <p class="text">
+              My mission on the back end is to develop, maintain, test and debug
+              the core of the application. Focusing on the server, database and
+              API integration, and ensuring a high level of security for
+              authorisation and data protection is applied.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- App Creation Modal -->
+    <div
+      class="modal fade"
+      id="appCreation"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">App Creation</h3>
+            <p class="text">
+              My mission as an app creator is to empower your brand with a
+              standout mobile presence. Specialized in crafting cross-platform
+              mobile applications, whether it's developing a native app, or
+              transforming traditional websites into Progressive Web Apps
+              (PWAs).
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CreAIte Modal -->
+    <div
+      class="modal fade"
+      id="creaite"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">CreAIte - AI Powered Image Generation</h3>
+            <p class="text">
+              CreAIte is a cutting-edge MERN (MongoDB, Express.js, React.js,
+              Node.js) application that harnesses the power of artificial
+              intelligence to enable users to generate images from textual
+              prompts. This innovative platform integrates a variety of advanced
+              technologies and packages to deliver a seamless and engaging user
+              experience.
+            </p>
+            <h4 class="heading">Key Features:</h4>
+            <ul>
+              <li class="text">
+                <strong>AI-Powered Image Generation</strong>: Utilizes OpenAI's
+                DALL-E and ChatGPT models to generate images based on
+                user-provided text prompts, demonstrating the intersection of AI
+                and creativity.
+              </li>
+              <li class="text">
+                <strong>Rich Visual Experience</strong>: Enhanced with
+                animations and visual effects using Framer Motion and React
+                Tilt, creating an immersive and interactive user interface.
+              </li>
+              <li class="text">
+                <strong>Data Visualization</strong>: Implements React Chart.js
+                for dynamic and visually appealing data visualization, allowing
+                users to analyze and interpret generated data.
+              </li>
+              <li class="text">
+                <strong>Real-Time Collaboration</strong>: Employs Socket.io for
+                live chat functionality, enabling real-time communication and
+                collaboration among users.
+              </li>
+              <li class="text">
+                <strong>Scalable Image Handling</strong>: Integrates React Image
+                Crop and Cloudinary for efficient image storage and
+                manipulation, ensuring optimal performance and scalability.
+              </li>
+              <li class="text">
+                <strong>Secure Payments</strong>: Utilizes Stripe API for secure
+                payment processing, safeguarding user transactions and ensuring
+                a seamless purchasing experience.
+              </li>
+              <li class="text">
+                <strong>Authentication and User Management</strong>: Implements
+                Firebase for robust authentication and user management
+                functionalities, enhancing security and user convenience.
+              </li>
+              <li class="text">
+                <strong>Automated Tasks</strong>: Uses Node-Schedule for
+                automated daily checks on subscription details, ensuring timely
+                updates and management of user accounts.
+              </li>
+              <li class="text">
+                <strong>Communication and Notifications</strong>: Integrates
+                Nodemailer to send automated emails, facilitating communication
+                with users and enhancing engagement.
+              </li>
+              <li class="text">
+                <strong>API Integration</strong>: Leverages Axios for seamless
+                integration with external APIs, enabling data fetching and
+                interaction with third-party services.
+              </li>
+            </ul>
+
+            <h4 class="heading">Technologies Used:</h4>
+            <ul>
+              <li class="text">
+                <strong>Frontend</strong>: React.js, Framer Motion, React Tilt,
+                React Typed, React Chart.js, Redux, React Infinite Scroll
+              </li>
+              <li class="text">
+                <strong>Backend</strong>: Node.js, Express.js, MongoDB
+                (Mongoose), Socket.io, Node-Schedule, Nodemailer
+              </li>
+              <li class="text">
+                <strong>AI Services</strong>: OpenAI (ChatGPT, DALL-E)
+              </li>
+              <li class="text">
+                <strong>Cloud Services</strong>: Cloudinary for image storage
+              </li>
+              <li class="text">
+                <strong>Authentication</strong>: Firebase Authentication
+              </li>
+              <li class="text"><strong>Payment Processing</strong>: Stripe</li>
+            </ul>
+
+            <h4 class="heading">Project Goals:</h4>
+            <p class="text">
+              CreAIte aims to revolutionize creative expression by empowering
+              users to generate high-quality images effortlessly through AI. The
+              project focuses on combining advanced AI capabilities with
+              intuitive user interfaces and robust backend infrastructure to
+              deliver a seamless and enjoyable user experience.
+            </p>
+
+            <h4 class="heading">Outcome:</h4>
+            <p class="text">
+              The result is a sophisticated web application that showcases the
+              potential of AI in creative industries. CreAIte not only
+              demonstrates technical proficiency in frontend and backend
+              development but also highlights expertise in integrating complex
+              AI models and third-party services. Explore CreAIte to witness
+              firsthand the fusion of technology and creativity, setting a new
+              standard in AI-driven image generation platforms.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Legal Mockup Modal -->
+    <div
+      class="modal fade"
+      id="legalMockup"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Legal Mockup</h3>
+            <p class="text">
+              Designed and developed as a showcase for legal services, the Legal
+              Mockup Site is a responsive web application built using the
+              Bootstrap framework. Leveraging modern web development practices,
+              the site integrates advanced features such as smooth animations
+              powered by AOS and a sophisticated image gallery utilizing
+              FancyApps, enhancing user interaction and visual appeal.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NovaQuest Modal -->
+    <div
+      class="modal fade"
+      id="viewNovaQuest"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">View NovaQuest</h3>
+            <p class="text">
+              To view the NovaQuest project, please follow these steps:
+            </p>
+            <ol class="instructions">
+              <li class="text">Ensure you are using a mobile device.</li>
+              <li class="text">
+                Install Expo Go from your app store if you haven't already.
+              </li>
+              <li class="text">
+                Click this link again on a mobile device and open the project in
+                Expo Go.
+              </li>
+            </ol>
+            <p class="text">Thank you for your interest in NovaQuest!</p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="novaquest"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">NovaQuest</h3>
+            <p class="text">
+              Embark on an extraordinary cosmic journey with this full stack
+              mobile application, meticulously crafted using React Native,
+              MongoDB, ExpressJS, and NodeJS. Tailored for young explorers, this
+              space-themed app leverages the NASA API to showcase captivating
+              imagery, including the astronomy picture of the day, real images
+              of Mars taken by Rovers, live updates on the International Space
+              Station, vivid details about asteroids close to Earth, and
+              in-depth knowledge about all planets and dwarfs within our solar
+              system. Beyond exploration, users can embark on missions, unlock
+              achievements, and gain XP to rank up within the app. The app also
+              offers interactive games, such as trivia challenges with ranging
+              difficulty levels, drag and drop planetary arrangements, and an
+              in-flight challenge to avoid asteroids - which uses Matter.js to
+              incorporate physics, and features a global leaderboard. Creating a
+              sense of community, users can also establish their own profiles,
+              share posts, and engage with content though likes and pre-written
+              comments in a secure, kid-friendly environment. Live notifications
+              keep users connected to real-time events, while music and sound
+              effects enhance the overall experience. Users can also enjoy
+              random space facts and animations throughout this immersive and
+              entertaining platform.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Love is in Cyprus Modal -->
+    <div
+      class="modal fade"
+      id="loveIsInCyprus"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Love is in Cyprus</h3>
+            <p class="text">
+              Full stack dynamic dating application built with the MERN stack.
+              Harnessing the power of React to build an intuitive and
+              interactive user interface which adapts to all devices, React
+              Router to implement smooth navigation, and Redux to efficiently
+              manage state and data flow. On the backend, the capabilities of
+              Node.js and Express are utilized to create a robust and scalable
+              server, with MongoDB employed to design a flexible database
+              schema. Additionally, I have integrated a number of third-party
+              services and APIs. Google Firebase implemented for secure
+              authentication streamlined user onboarding, with OTP verification
+              adding an extra layer of security. Socket.io leveraged to
+              seamlessly incorporate real-time features such as live chat and
+              notifications. PayPal API integrated to ensure secure transactions
+              for both payments and refunds. And facial recognition technology
+              implemented for profile image verification. Furthermore, I have
+              created a comprehensive management system for use by admin
+              members. Through Node.js and Express, I designed APIs for data
+              manipulation, charting statistical insights with Chart.js, as well
+              as seamless integration of the Mailchimp API to enable mass mail
+              communication, and Nodemailer for automated responses. Love is in
+              Cyprus can also be downloaded onto a mobile device as a fully
+              functioning PWA.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nolan Clothing Modal -->
+    <div
+      class="modal fade"
+      id="nolanClothing"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Nolan Clothing</h3>
+            <p class="text">
+              Ecommerce application built on ReactJS with SCSS for styling,
+              Firebase for authentication and Redux for state management. Users
+              can create an account, browse items, add to basket and complete
+              transactions using test credit card details.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jenn-Jenn Wellness Modal -->
+    <div
+      class="modal fade"
+      id="jennJennWellness"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Jenn-Jenn Wellness</h3>
+            <p class="text">
+              Landing page for spirituality and mindfullness expert,
+              Jenn-Jenn-Wellness. Uses Slick Carousel and Animate On Scroll for
+              smooth sliding effects. Contains video gallery, timed modal, and
+              fully functional contact form.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Milowe Modal -->
+    <div
+      class="modal fade"
+      id="milowe"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Milowe</h3>
+            <p class="text">
+              Landing page for covid test providing company Milowe. Uses
+              IntersectionObservers to achieve smooth slide and fade animations
+              on scroll. Includes fully functioning contact form built on a PHP
+              backend.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Green Point Modal -->
+    <div
+      class="modal fade"
+      id="greenPoint"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Green Point</h3>
+            <p class="text">
+              Landing page for waste and refuse collection company Green Point.
+              Utilizes Tilt.js for slick animation and includes fully
+              functioning contact form built on a PHP backend.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Gents of Brooklyn Academy Modal -->
+    <div
+      class="modal fade"
+      id="gbacademy"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">The Gents of Brooklyn Academy</h3>
+            <p class="text">
+              Landing page for barbershop academy The Gents of Brooklyn.
+              Includes video showreel, modal popup on timer with working email
+              functionality, and makes use of JavaScript MutationObservers to
+              watch for CSS class changes.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apex Scrap Modal -->
+    <div
+      class="modal fade"
+      id="apexScrap"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Apex Scrap</h3>
+            <p class="text">
+              Full stack MERN application for a scrap metal company. Uses
+              Context API for state management, Yup form validation and npm
+              packages React-Countup, React-Visibilty-Sensor and Swiper to
+              create sleek animations. Connects with the DVLA Vehicle Enquiry
+              Service API to provide real user quotes. Includes fully functional
+              contact form using Nodemailer, along with React-Toastify for an
+              enhanced user experience.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hire Me Modal -->
+    <div
+      class="modal fade"
+      id="hire-me"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Let's Team Up!</h3>
+            <div class="hireme-form" id="hireme-form">
+              <p class="text">
+                Just need a quick overview of your requirements here and I'll
+                get back to you asap.
+              </p>
+              <form action="hireme.php">
+                <div class="row">
+                  <div class="hidden-container">
+                    <input
+                      class="hide"
+                      name="hireme"
+                      autocomplete="false"
+                      tabindex="-1"
+                    />
+                  </div>
+                  <input
+                    type="text"
+                    class="contact-input"
+                    placeholder="Name"
+                    id="hiremename"
+                    name="hiremename"
+                  />
+                </div>
+
+                <div class="row">
+                  <input
+                    type="text"
+                    class="contact-input"
+                    placeholder="Email"
+                    id="hiremeemail"
+                    name="hiremeemail"
+                  />
+                </div>
+
+                <div class="row">
+                  <textarea
+                    class="contact-input textarea"
+                    placeholder="Message"
+                    id="hirememessage"
+                    name="hirememessage"
+                  ></textarea>
+                </div>
+                <span id="hireme-status" class="text"></span><br />
+                <div class="hireme-btns">
+                  <a
+                    type="submit"
+                    onclick="validateHireMe()"
+                    class="heading btn btn-primary"
+                    >Send</a
+                  >
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="grid-4">
+          <div class="grid-4-col footer-about">
+            <h3 class="title-sm">About</h3>
+            <p class="text">
+              Nolancode can work with you and help to create your next project.
+            </p>
+          </div>
+
+          <div class="grid-4-col footer-links">
+            <h3 class="title-sm">Links</h3>
+            <ul>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#services">Services</a>
+              </li>
+              <li>
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="#blog">Blog</a>
+              </li>
+              <li>
+                <a href="#testimonials">Testimonials</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid-4-col footer-links">
+            <h3 class="title-sm">Services</h3>
+            <ul>
+              <li>
+                <a href="#" data-toggle="modal" data-target="#webDesign"
+                  >Web Design</a
+                >
+              </li>
+              <li>
+                <a href="#" data-toggle="modal" data-target="#webDev"
+                  >Web Dev</a
+                >
+              </li>
+              <li>
+                <a href="#" data-toggle="modal" data-target="#appCreation"
+                  >Mobile App</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid-4-col footer-newstletter" id="subscribe-form">
+            <h3 class="title-sm">Subscribe</h3>
+            <p class="text">
+              To become notified when any new blog posts and projects are
+              released.
+            </p>
+            <form action="subscribe.php">
+              <div class="footer-input-wrap">
+                <div class="hidden-container">
+                  <input
+                    class="hide"
+                    name="subscribe"
+                    autocomplete="false"
+                    tabindex="-1"
+                  />
+                </div>
+                <input
+                  type="text"
+                  class="footer-input"
+                  placeholder="Email"
+                  id="subscribe-email"
+                  name="subscribe-email"
+                />
+                <a
+                  type="submit"
+                  onclick="validateSubscribe()"
+                  class="input-arrow"
+                >
+                  <i class="fas fa-angle-right"></i>
+                </a>
+              </div>
+              <span id="subscribe-status" class="text"></span><br />
+            </form>
+          </div>
+        </div>
+
+        <div class="bottom-footer">
+          <div class="copyright">
+            <p class="text">
+              <a href="http://nolancode.com/" target="_blank" class="heading"
+                >Nolancode</a
+              >
+              -
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+            </p>
+          </div>
+
+          <div class="followme-wrap">
+            <div class="followme">
+              <h3>Follow me</h3>
+              <span class="footer-line"></span>
+              <div class="social-media">
+                <a href="https://twitter.com/Nolan_code" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/nolan_code" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/daniel-nolan85"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="back-btn-wrap">
+              <a href="#" class="back-btn">
+                <i class="fas fa-chevron-up"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Isotope JS -->
+    <script src="isotope.pkgd.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Custom JS-->
+    <script src="script.js"></script>
+  </body>
+</html>

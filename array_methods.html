@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>NolanCode Blog - JavaScript MutationObservers</title>
+  </head>
+  <body>
+    <!--
+***     **     *    **  *   *    *   ***   *   * **   * ***   *   
+   *   **_   _  *   *_   *   **   *    ***  *   **  *_ ***  *   **
+ **   * | \ | | ___ | | ___ _ _ __   ___  ___   __  | | ___ **   * *
+ *   *  |  \| |/ _ \| |/ _ ` | `  \ / __|/ _ \ / _ `| |/ _ \  *  **
+   ***  | |\  | |_| | | |_|  | |`| | |__| |_| | |_|   |  __/ *      *
+ *    **|_| \_|\___/|_|\___,_|_| |_|\___|\___/ \___,|_|\___| ** * *
+ ***     **   *     ***  **   *  *   **  ***  **  **  *    **  * *
+      *    *    **     *    ***  *    * **    *      *    *     *
+
+Hey there! Wanna change the world?
+Let's do something really BIG together?
+Get in touch down below or drop me a direct email at daniel@nolancode.com with the word 'Gamechangers' in the subject.
+Look forward to hearing from you!
+-->
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-xl navbar-light fixed-top py-3"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html"
+          >Nolancode</a
+        >
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#about"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#services"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#blog"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link js-scroll-trigger"
+                href="index.html#testimonials"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#contact"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="btn btn-primary text-white nav-link js-scroll-trigger px-3"
+                href="index.html#hireme"
+                >Hire Me</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="individual-blog section">
+      <div class="section-container">
+        <div class="section-header">
+          <h3 class="title heading text-uppercase" data-title="My Posts">
+            My blog
+          </h3>
+          <p class="text">
+            If there's a JavaScript related topic you'd like to see covered
+            here, please get in touch
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="individual-blog-header">
+      <h3 class="title heading">JavaScript Array Methods</h3>
+      <h4 class="text">
+        A brief overview of methods that can be applied to a JavaScript array
+      </h4>
+    </section>
+
+    <hr />
+    <section class="content-container">
+      <div class="top-content">
+        <div class="featured-article">
+          <div class="img">
+            <img src="img/array-methods-rect.png" alt="" />
+          </div>
+          <br />
+          <br />
+          <h4 class="heading">Array.prototype.at()</h4>
+          <p class="text">
+            Returns the item at the index of a given integer value:
+          </p>
+          <p class="code">
+            const fruits = ['banana', 'apple', 'mango', 'kiwi', 'pear'] <br />
+            const index = 2 <br />
+            <br />
+            console.log(`The item of index number ${index} is
+            ${fruits.at(index)}`) <br />
+            <span class="output">// The item of index number 2 is mango</span>
+          </p>
+          <p class="text">Negative integers are also supported:</p>
+          <p class="code">
+            const fruits = ['banana', 'apple', 'mango', 'kiwi', 'pear'] <br />
+            const index = -2 <br />
+            <br />
+            console.log (`The item of index number ${index} is
+            ${fruits.at(index)}`) <br />
+            <span class="output">// The item of index number -2 is kiwi</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.concat()</h4>
+          <p class="text">
+            Used to merge multiple arrays and return a new one:
+          </p>
+          <p class="code">
+            const cities = ['Los Angeles', 'Arizona', 'Las Vegas', 'Miami', 'New
+            Orleans'] <br />
+            const states = ['California', 'Texas', 'Nevada', 'Florida',
+            'Louisiana'] <br />
+            const citiesAndStates = cities.concat(states) <br />
+            <br />
+            console.log(citiesAndStates) <br />
+            <span class="output"
+              >// ['Los Angeles', 'Dallas', 'Las Vegas', 'Miami', 'New Orleans',
+              'California', 'Texas', 'Nevada', 'Florida', 'Louisiana']</span
+            >
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.copyWithin()</h4>
+          <p class="text">
+            Makes a copy of part of an array elsewhere within the same array and
+            returns without modifying the length:
+          </p>
+          <p class="code">
+            const nums = [1, 2, 3, 4, 5] <br />
+            <br />
+            console.log(nums.copyWithin(2, 3))
+            <span class="comment"
+              >// copies to index [2] all items from index [3] to the end</span
+            ><br />
+            <span class="output">// [1, 2, 4, 5, 5]</span> <br />
+            <br />
+            const nums = [1, 2, 3, 4, 5] <br />
+            <br />
+            console.log(nums.copyWithin(2, 3, 4))
+            <span class="comment"
+              >// optional third argument specifies index position to stop
+              copying from</span
+            ><br />
+            <span class="output">// [1, 2, 5, 5, 5]</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.entries()</h4>
+          <p class="text">
+            Returns an iterator object containing key/value pairs for each
+            index:
+          </p>
+          <p class="code">
+            const colors = ['red', 'blue', 'yellow', 'cyan', 'purple'] <br />
+            const iterator = colors.entries()<br />
+            <br />
+            console.log(iterator.next().value)
+            <span class="comment">// combines with in-built next() method</span>
+            <br />
+            <span class="output">// [0, 'red']</span> <br />
+            <br />
+            console.log(iterator.next().value) <br />
+            <span class="output">// [1, 'blue']</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.every()</h4>
+          <p class="text">
+            Returns a Boolean value based on whether all elements pass a
+            provided test:
+          </p>
+          <p class="code">
+            const nums = [18, 46, 77, 943, 14] <br />
+            <br />
+            console.log(nums.every(val => val > 0)) <br />
+            <span class="output">// true</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.fill()</h4>
+          <p class="text">
+            Changes specified elements in an array to a static value:
+          </p>
+          <p class="code">
+            const nums = [1, 2, 3, 4, 5] <br />
+            <br />
+            console.log(nums.fill('x', 1, 3))
+            <span class="comment"
+              >// fill with an x items from index [1] to, but not including,
+              index [3]</span
+            >
+            <br />
+            <span class="output">// [1, 'x', 'x', 4, 5]</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.filter()</h4>
+          <p class="text">
+            Creates a new array with the elements that pass an implemented test:
+          </p>
+          <p class="code">
+            const words = ['screwdriver', 'bus', 'cabbage', 'tinsel', 'octopus']
+            <br />
+            const shortWords = words.filter(word => word.length <= 6) <br />
+            <br />
+            console.log(shortWords) <br />
+            <span class="output">// ['bus', 'tinsel']</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.find()</h4>
+          <p class="text">
+            Returns value of the first element that passes an implemented test:
+          </p>
+          <p class="code">
+            const nums = [20, 48, 6, 130, 2] <br />
+            <br />
+            console.log(nums.find(val => val < 10)) <br />
+            <span class="output">// 6</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.findIndex()</h4>
+          <p class="text">
+            Returns index of the first element that passes an implemented test:
+          </p>
+          <p class="code">
+            const nums = [28, 39, 71, 800, 94] <br />
+            <br />
+            console.log(nums.findIndex(val => val > 50)) <br />
+            <span class="output">// 2</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.flat()</h4>
+          <p class="text">
+            Returns a new array with sub-array elements concatenated into it by
+            a specified depth:
+          </p>
+          <p class="code">
+            const nums = [1, 2, [3, 4, 5]] <br />
+            <br />
+            console.log(nums.flat()) <br />
+            <span class="output">// [1, 2, 3, 4, 5]</span> <br />
+            <br />
+            const nums = [1, [2, [3, [4, 5]]]] <br />
+            <br />
+            console.log(nums.flat(2)) <br />
+            <span class="output">// [1, 2, 3, [4, 5]]</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.flatMap()</h4>
+          <p class="text">
+            Returns a new array by applying a callback function to each item and
+            then flattening the result. More efficient than calling
+            <span class="code">map()</span> and then
+            <span class="code">flat()</span> separately but returns an identical
+            outcome:
+          </p>
+          <p class="code">
+            const nums = [2, 4, 6, 8, 10] <br />
+            <br />
+            console.log(nums.flatMap(val => val/2)) <br />
+            <span class="output">// [1, 2, 3, 4, 5]</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.forEach()</h4>
+          <p class="text">
+            Executes a given function once on each element of the array:
+          </p>
+          <p class="code">
+            const letters = ['a', 'b', 'c', 'd', 'e'] <br />
+            <br />
+            letters.forEach(letter => console.log(letter)) <br />
+            <span class="output">// a</span> <br />
+            <span class="output">// b</span> <br />
+            <span class="output">// c</span> <br />
+            <span class="output">// d</span> <br />
+            <span class="output">// e</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.includes()</h4>
+          <p class="text">
+            Determines whether an array includes a particular value and returns
+            a Boolean:
+          </p>
+          <p class="code">
+            const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday',
+            'Friday'] <br />
+            <br />
+            console.log(days.includes('Tuesday')) <br />
+            <span class="output">// true</span> <br />
+            <br />
+            console.log(days.includes('Saturday')) <br />
+            <span class="output">// false</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.indexOf()</h4>
+          <p class="text">
+            Returns the first index at which an element can be found. If not
+            found, returns -1:
+          </p>
+          <p class="code">
+            const sports = ['football', 'hockey', 'tennis', 'basketball',
+            'boxing'] <br />
+            <br />
+            console.log(sports.indexOf('football')) <br />
+            <span class="output">// 0</span> <br />
+            <br />
+            console.log(sports.indexOf('darts')) <br />
+            <span class="output">// -1</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.join()</h4>
+          <p class="text">
+            Returns a string by concatenating all elements of an array,
+            separated by a comma or specified character:
+          </p>
+          <p class="code">
+            const people = ['Billy', 'Jane', 'Sarah', 'Thomas', 'Greg'] <br />
+            <br />
+            console.log(people.join()) <br />
+            <span class="output">// Billy,Jane,Sarah,Thomas,Greg</span> <br />
+            <br />
+            console.log(people.join(' ')) <br />
+            <span class="output">// Billy Jane Sarah Thomas Greg</span> <br />
+            <br />
+            console.log(people.join('-')) <br />
+            <span class="output">// Billy-Jane-Sarah-Thomas-Greg</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.keys()</h4>
+          <p class="text">
+            Returns an iterator object containing keys for each index:
+          </p>
+          <p class="code">
+            const months = ['January', 'February', 'March', 'April', 'May']
+            <br />
+            const iterator = months.keys() <br />
+            <br />
+            for (const key of iterator) { <br />
+            &nbsp;&nbsp;console.log(key); <br />
+            } <br />
+            <span class="output">// 0</span> <br />
+            <span class="output">// 1</span> <br />
+            <span class="output">// 2</span> <br />
+            <span class="output">// 3</span> <br />
+            <span class="output">// 4</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.lastIndexOf()</h4>
+          <p class="text">
+            Returns the last index at which an element can be found. If not
+            found, returns -1:
+          </p>
+          <p class="code">
+            const pets = ['dog', 'cat', 'rabbit', 'dog', 'fish'] <br />
+            <br />
+            console.log(pets.lastIndexOf('dog')) <br />
+            <span class="output">// 3</span> <br />
+            <br />
+            console.log(pets.lastIndexOf('snake')) <br />
+            <span class="output">// -1</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.map()</h4>
+          <p class="text">
+            Performs a given function on each element and returns a new array
+            with the results:
+          </p>
+          <p class="code">
+            const nums = [5, 10, 15, 20, 25] <br />
+            <br />
+            console.log(nums.map(val => val * 2)) <br />
+            <span class="output">// 10, 20, 30, 40, 50</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.pop()</h4>
+          <p class="text">
+            Removes last element from an array and returns it, modifying the
+            length of the original array:
+          </p>
+          <p class="code">
+            const animals = ['bear', 'jaguar', 'penguin', 'donkey', 'whale']
+            <br />
+            <br />
+            console.log(animals.pop()) <br />
+            <span class="output">// 'whale'</span> <br />
+            <br />
+            console.log(animals) <br />
+            <span class="output"
+              >// ['bear', 'jaguar', 'penguin', 'donkey']</span
+            >
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.push()</h4>
+          <p class="text">
+            Adds one or more elements to the end of an array and returns its new
+            length:
+          </p>
+          <p class="code">
+            const vehicles = ['car', 'plane', 'scooter', 'hovercraft', 'truck']
+            <br />
+            <br />
+            console.log(vehicles.push('helicopter')) <br />
+            <span class="output">// 6</span> <br />
+            <br />
+            console.log(vehicles) <br />
+            <span class="output"
+              >// ['car', 'plane', 'scooter', 'hovercraft', 'truck',
+              'helicopter']</span
+            >
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.reduce()</h4>
+          <p class="text">
+            Executes a function on each element in order, passing the return
+            value on to the next item, and giving a single value as a final
+            result:
+          </p>
+          <p class="code">
+            const nums = [1, 2, 3, 4, 5] <br />
+            <br />
+            console.log(nums.reduce((prevVal, currVal) => prevVal + currVal))
+            <br />
+            <span class="output">// 15</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.reduceRight()</h4>
+          <p class="text">
+            Executes a function on each element from right to left, passing the
+            return value on to the next item, and giving a single value as a
+            final result:
+          </p>
+          <p class="code">
+            const letters = ['a', 'b', 'c', 'd', 'e'] <br />
+            <br />
+            console.log(letters.reduceRight((prevVal, currVal) => prevVal +
+            currVal, 'f')) <br />
+            <span class="output">// fedcba</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.reverse()</h4>
+          <p class="text">Reverses an array:</p>
+          <p class="code">
+            const nums = [1, 2, 3, 4, 5] <br />
+            <br />
+            console.log(nums.reverse()) <br />
+            <span class="output">// [5, 4, 3, 2, 1]</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.shift()</h4>
+          <p class="text">
+            Removes the first element from an array and returns it, modifying
+            the length of the original array:
+          </p>
+          <p class="code">
+            const nations = ['UK', 'France', 'Australia', 'Japan', 'Cameroon']
+            <br />
+            <br />
+            console.log(nations.shift()) <br />
+            <span class="output">// 'UK'</span> <br />
+            <br />
+            console.log(nations) <br />
+            <span class="output"
+              >// ['France', 'Australia', 'Japan', 'Cameroon']</span
+            >
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.slice()</h4>
+          <p class="text">
+            Returns a copy of a selected part of an array, leaving the original
+            array unmodified:
+          </p>
+          <p class="code">
+            const landmarks = ['Eiffel Tower', 'Great Pyramid', 'Stonehenge',
+            'Machu Picchu', 'Ayers Rock'] <br />
+            <br />
+            console.log(landmarks.slice(1, 3)
+            <span class="comment"
+              >// parameters indicate start and end indices to slice from and
+              to</span
+            >
+            <br />
+            <span class="output">// ['Great Pyramid', 'Stonehenge']</span>
+            <br />
+            <br />
+            console.log(landmarks) <br />
+            <span class="output"
+              >// ['Eiffel Tower', 'Great Pyramid', 'Stonehenge', 'Machu
+              Picchu', 'Ayers Rock']</span
+            >
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.some()</h4>
+          <p class="text">
+            Returns a Boolean value depending on whether at least one element in
+            the array passes an implemented test:
+          </p>
+          <p class="code">
+            const nums = [1, 2, 3, 4, 5] <br />
+            <br />
+            console.log(nums.some(val => val % 2 === 0)) <br />
+            <span class="output">// true</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.sort()</h4>
+          <p class="text">
+            Sorts the elements of an array and returns a new array:
+          </p>
+          <p class="code">
+            const toys = ['ball', 'yoyo', 'robot', 'train', 'hula-hoop'] <br />
+            <br />
+            console.log(toys.sort()) <br />
+            <span class="output"
+              >// ['ball', 'hula-hoop', 'robot', 'train', 'yoyo']</span
+            >
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.splice()</h4>
+          <p class="text">
+            Modifies an array by removing/replacing elements from it and/or
+            adding new elements in their place:
+          </p>
+          <p class="code">
+            const phonetics = ['alpha', 'bravo', 'charlie', 'echo', 'foxtrot']
+            <br />
+            phonetics.splice(3, 0, 'delta') <br />
+            <br />
+            console.log(phonetics) <br />
+            <span class="output"
+              >// ['alpha', 'bravo', 'charlie', 'delta', 'echo',
+              'foxtrot']</span
+            >
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.toLocaleString()</h4>
+          <p class="text">
+            Converts elements into strings using their toLocaleString methods
+            according to language and configuration properties:
+          </p>
+          <p class="code">
+            console.log(new Date().toLocaleString('en'), { timeZone: 'UTC' })
+            <br />
+            <span class="output">// 1/31/2022, 2:05:09 PM</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.toString()</h4>
+          <p class="text">Converts array elements into a string:</p>
+          <p class="code">
+            const arr = ['a', 1, 'b', 2, 'c', 3] <br />
+            <br />
+            console.log(arr.toString()) <br />
+            <span class="output">// a,1,b,2,c,3</span>
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.unshift()</h4>
+          <p class="text">
+            Adds one or more elements to the beginning of an array and returns
+            its new length:
+          </p>
+          <p class="code">
+            const utensils = ['fork', 'whisk', 'spatula', 'tongs', 'masher']
+            <br />
+            <br />
+            console.log(utensils.unshift('can opener')) <br />
+            <span class="output">// 6</span> <br />
+            <br />
+            console.log(utensils) <br />
+            <span class="output"
+              >// ['can opener', 'fork', 'whisk', 'spatula', 'tongs',
+              'masher']</span
+            >
+          </p>
+          <br />
+          <h4 class="heading">Array.prototype.values()</h4>
+          <p class="text">
+            Returns an iterator object containing values for each index:
+          </p>
+          <p class="code">
+            const months = ['January', 'February', 'March', 'April', 'May']
+            <br />
+            const iterator = months.values() <br />
+            <br />
+            for (const value of iterator) { <br />
+            &nbsp;&nbsp;console.log(value); <br />
+            } <br />
+            <span class="output">// January</span> <br />
+            <span class="output">// February</span> <br />
+            <span class="output">// March</span> <br />
+            <span class="output">// April</span> <br />
+            <span class="output">// May</span> <br />
+          </p>
+        </div>
+      </div>
+
+      <div class="bottom-content">
+        <div class="avatar-content">
+          <img src="img/me.jpg" alt="" />
+          <p class="author-caption text">
+            Daniel Nolan is a full-stack JavaScript developer who has been
+            writing code since 2019. His blog articles share the knowledge and
+            skills he has learned related to JavaScript and ReactJS coding
+            techniques.
+          </p>
+        </div>
+        <hr />
+        <div class="popular-posts-section">
+          <h5 class="heading">POPULAR POSTS</h5>
+          <div class="popular-posts">
+            <div class="popular-post">
+              <a href="context_api.html">
+                <img src="img/context-api-sq.png" alt="" />
+                <p class="caption">React Context API</p>
+              </a>
+            </div>
+            <div class="popular-post">
+              <a href="mutation_observer.html">
+                <img src="img/mutation-observer-sq.png" alt="" />
+                <p class="caption">JavaScript MutationObservers</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="https://www.buymeacoffee.com/nolancode"
+        target="_blank"
+        class="buymeacoffee"
+      >
+        <img src="img/buy-me-a-coffee.png" alt="buy me a coffee" />
+      </a>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="grid-4">
+          <div class="grid-4-col footer-about">
+            <h3 class="title-sm">About</h3>
+            <p class="text">
+              Nolancode can work with you and help to create your next project.
+            </p>
+          </div>
+
+          <div class="grid-4-col footer-links">
+            <h3 class="title-sm">Links</h3>
+            <ul>
+              <li>
+                <a href="index.html#about">About</a>
+              </li>
+              <li>
+                <a href="index.html#services">Services</a>
+              </li>
+              <li>
+                <a href="index.html#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="index.html#blog">Blog</a>
+              </li>
+              <li>
+                <a href="index.html#testimonials">Testimonials</a>
+              </li>
+              <li>
+                <a href="index.html#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid-4-col footer-links">
+            <h3 class="title-sm">Services</h3>
+            <ul>
+              <li>
+                <a href="#" data-toggle="modal" data-target="#webDesign"
+                  >Web Design</a
+                >
+              </li>
+              <li>
+                <a href="#" data-toggle="modal" data-target="#webDev"
+                  >Web Dev</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid-4-col footer-newstletter" id="subscribe-form">
+            <h3 class="title-sm">Subscribe</h3>
+            <p class="text">
+              To become notified when any new blog posts and projects are
+              released.
+            </p>
+            <form action="subscribe.php">
+              <div class="footer-input-wrap">
+                <div class="hidden-container">
+                  <input
+                    class="hide"
+                    name="subscribe"
+                    autocomplete="false"
+                    tabindex="-1"
+                  />
+                </div>
+                <input
+                  type="text"
+                  class="footer-input"
+                  placeholder="Email"
+                  id="subscribe-email"
+                  name="subscribe-email"
+                />
+                <a
+                  type="submit"
+                  onclick="validateSubscribe()"
+                  class="input-arrow"
+                >
+                  <i class="fas fa-angle-right"></i>
+                </a>
+              </div>
+              <span id="subscribe-status" class="text"></span><br />
+            </form>
+          </div>
+        </div>
+
+        <div class="bottom-footer">
+          <div class="copyright">
+            <p class="text">
+              <a href="http://nolancode.com/" target="_blank" class="heading"
+                >Nolancode</a
+              >
+              -
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+            </p>
+          </div>
+
+          <div class="followme-wrap">
+            <div class="followme">
+              <h3>Follow me</h3>
+              <span class="footer-line"></span>
+              <div class="social-media">
+                <a href="https://twitter.com/Nolan_code" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/nolan_code" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/daniel-nolan85"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="back-btn-wrap">
+              <a href="#" class="back-btn">
+                <i class="fas fa-chevron-up"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Web Design Modal -->
+    <div
+      class="modal fade"
+      id="webDesign"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Web Design</h3>
+            <p class="text">
+              My mission as a designer is to work closely with each customer to
+              make sure their websites align with their brand's identity. Using
+              various methods and latest technologies to create GUI elements
+              such as menus, tables, forms and widgets.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Web Development Modal -->
+    <div
+      class="modal fade"
+      id="webDev"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Web Development</h3>
+            <p class="text">
+              My mission on the back end is to develop, maintain, test and debug
+              the core of the application. Focusing on the server, database and
+              API integration, and ensuring a high level of security for
+              authorisation and data protection is applied.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Isotope JS -->
+    <script src="isotope.pkgd.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Custom JS-->
+    <script src="script.js"></script>
+  </body>
+</html>

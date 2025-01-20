@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>NolanCode Blog - JavaScript MutationObservers</title>
+  </head>
+  <body>
+    <!--
+***     **     *    **  *   *    *   ***   *   * **   * ***   *   
+   *   **_   _  *   *_   *   **   *    ***  *   **  *_ ***  *   **
+ **   * | \ | | ___ | | ___ _ _ __   ___  ___   __  | | ___ **   * *
+ *   *  |  \| |/ _ \| |/ _ ` | `  \ / __|/ _ \ / _ `| |/ _ \  *  **
+   ***  | |\  | |_| | | |_|  | |`| | |__| |_| | |_|   |  __/ *      *
+ *    **|_| \_|\___/|_|\___,_|_| |_|\___|\___/ \___,|_|\___| ** * *
+ ***     **   *     ***  **   *  *   **  ***  **  **  *    **  * *
+      *    *    **     *    ***  *    * **    *      *    *     *
+
+Hey there! Wanna change the world?
+Let's do something really BIG together?
+Get in touch down below or drop me a direct email at daniel@nolancode.com with the word 'Gamechangers' in the subject.
+Look forward to hearing from you!
+-->
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-xl navbar-light fixed-top py-3"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html"
+          >Nolancode</a
+        >
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#about"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#services"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#blog"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link js-scroll-trigger"
+                href="index.html#testimonials"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html#contact"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="btn btn-primary text-white nav-link js-scroll-trigger px-3"
+                href="index.html#hireme"
+                >Hire Me</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="individual-blog section">
+      <div class="section-container">
+        <div class="section-header">
+          <h3 class="title heading text-uppercase" data-title="My Posts">
+            My blog
+          </h3>
+          <p class="text">
+            If there's a JavaScript related topic you'd like to see covered
+            here, please get in touch
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="individual-blog-header">
+      <h3 class="title heading">React Context API</h3>
+      <h4 class="text">
+        Exploring how to manage state using React's Context API
+      </h4>
+    </section>
+
+    <hr />
+    <section class="content-container">
+      <div class="top-content">
+        <div class="featured-article">
+          <div class="img">
+            <img src="img/context-api-rect.png" alt="" />
+          </div>
+          <br />
+          <br />
+          <p class="text">
+            State is a JavaScript object used in React to store data that can be
+            used in components. State can be passed down between components
+            through props but only in one direction, from parent to child.
+          </p>
+          <br />
+          <p class="text">
+            This diagram represents the DOM of an application and shows which
+            components the <span class="code">Header</span> is able to pass data
+            to via props, and which ones it isn't.
+          </p>
+          <div class="article-img">
+            <img src="img/DOM.png" alt="" />
+          </div>
+          <br />
+          <p class="text">
+            So, what would we do if we needed to pass data from the
+            <span class="code">Header</span> to say, the
+            <span class="code">Article</span> component? Well, the obvious
+            answer might be to simply 'lift the state up' from the
+            <span class="code">Header</span> to the
+            <span class="code">App</span> component, since all the components
+            are children of the <span class="code">App</span>. This could work,
+            however it would be likely to involve a process known as 'prop
+            drilling', which is where state has to be passed through components
+            that don't actually need it, just so it is able to flow through to
+            the ones that do. For example, to pass state from
+            <span class="code">App</span> to
+            <span class="code">Article</span> in this way, it would also need to
+            make its way through <span class="code">Main</span>. In larger
+            projects this can easily become unmanageable and can also affect
+            performance of the application.
+          </p>
+          <br />
+          <p class="text">
+            A number of exterior libraries, such as
+            <a href="https://redux.js.org/" target="_blank">Redux</a> and
+            <a href="https://mobx.js.org/README.html" target="_blank">MobX</a>,
+            have been developed for React that allow for more state management
+            control, however the problem can also be addressed without the need
+            to install any additional packages, using
+            <a href="https://reactjs.org/docs/context.html" target="_blank"
+              >React's built-in Context API</a
+            >.
+          </p>
+          <br />
+          <p class="text">
+            Let's take this simple Navbar component for example:
+          </p>
+          <br />
+          <p class="code">
+            const Navbar = () => { <br />
+            &nbsp;&nbsp;return ( <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Link
+            to='#home'&gt;Home&lt;/Link&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Link
+            to='#about'&gt;About&lt;/Link&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Link
+            to='#contact'&gt;Contact&lt;/Link&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/nav&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button&gt;Login&lt;/button&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/header&gt; <br />
+            &nbsp;&nbsp;); <br />
+            }; <br />
+            <br />
+            export default Navbar;
+          </p>
+          <br />
+          <p class="text">
+            Now imagine we want the button to display a modal with a form to
+            allow the user to log in. We might decide to apply the
+            <span class="code">useState</span> hook to display a Login component
+            depending on a Boolean value, like this:
+          </p>
+          <br />
+          <p class="code">
+            import React, { useState } from 'react'; <br />
+            <br />
+            const Navbar = () => { <br />
+            &nbsp;&nbsp;const [showLogin, setShowLogin] = useState(false);
+            <br />
+            <br />
+            &nbsp;&nbsp;return ( <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Link
+            to='#home'&gt;Home&lt;/Link&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Link
+            to='#about'&gt;About&lt;/Link&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Link
+            to='#contact'&gt;Contact&lt;/Link&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button onClick={() =>
+            setShowLogin(true)}&gt;Login&lt;/button&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt; <br />
+            &nbsp;&nbsp;); <br />
+            }; <br />
+            <br />
+            export default Navbar;
+          </p>
+          <br />
+          <p class="text">
+            Sure, this is fine, but assume the Login component also needs access
+            to this state variable, here's where the Context API comes into
+            play.
+          </p>
+          <br />
+          <p class="text">
+            We could start by creating a new folder called
+            <span class="code">context</span>, and a new file inside it called
+            <span class="code">index.js</span>
+          </p>
+          <div class="article-img">
+            <img
+              src="img/c-api-folder-struct.png"
+              alt=""
+              class="folder-struct"
+            />
+          </div>
+          <br />
+          <p class="text">
+            In this file we import the
+            <span class="code">createContext</span> hook from React and save it
+            as a variable. We then create a new component that makes use of
+            <span class="code">useState</span> to store the data we require.
+          </p>
+          <br />
+          <p class="code">
+            import React, { useState, createContext } from 'react'; <br />
+            <br />
+            export const LoginContext = createContext(); <br />
+            <br />
+            export const LoginProvider = (props) => { <br />
+            &nbsp;&nbsp;const [showLogin, setShowLogin] = useState(false);
+            <br />
+            };
+          </p>
+          <br />
+          <p class="text">
+            <span class="code">createContext</span> has a built-in
+            <span class="code">Provider</span> method which we can chain to our
+            variable and give it our state as a prop,
+            <span class="code">value</span>. We then return and wrap this around
+            <span class="code">props.children</span> to allow all child elements
+            access to use it:
+          </p>
+          <br />
+          <p class="code">
+            return ( <br />
+            &nbsp;&nbsp;&lt;LoginContext.Provider
+            value={[showLogin,setShowLogin]}&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;{props.children} <br />
+            &nbsp;&nbsp;&lt;/LoginContext.Provider&gt; <br />
+            );
+          </p>
+          <br />
+          <p class="text">In full our index.js will display like this:</p>
+          <br />
+          <p class="code">
+            import React, { useState, createContext } from 'react'; <br />
+            <br />
+            export const LoginContext = createContext(); <br />
+            <br />
+            export const LoginProvider = (props) => { <br />
+            &nbsp;&nbsp;const [showLogin, setShowLogin] = useState(false);
+            <br />
+            <br />
+            &nbsp;&nbsp;return ( <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;LoginContext.Provider
+            value={[showLogin,setShowLogin]}&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{props.children} <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/LoginContext.Provider&gt; <br />
+            &nbsp;&nbsp;); <br />
+            };
+          </p>
+          <br />
+          <p class="text">
+            We need to then import our component into the root of our project in
+            <span class="code">App.js</span>, and wrap it around all components
+            that need access to the state.
+          </p>
+          <br />
+          <p class="code">
+            import Login from './components/Login'; <br />
+            import Navbar from './components/Navbar'; <br />
+            import { LoginProvider } from './context'; <br />
+            <br />
+            const App = () => { <br />
+            &nbsp;&nbsp;return ( <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;LoginProvider&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Navbar /&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Login /&gt; <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/LoginProvider&gt; <br />
+            &nbsp;&nbsp;); <br />
+            }; <br />
+            <br />
+            export default App;
+          </p>
+          <br />
+          <p class="text">
+            It's then just a simple case of importing
+            <span class="code">LoginContext</span> into any component that needs
+            it, in our case <span class="code">Login.js</span> and
+            <span class="code">Navbar.js</span>, and provide it with the
+            <span class="code">useContext</span> hook similar to initializing
+            state:
+          </p>
+          <br />
+          <p class="code">
+            import React, { useContext } from 'react'; <br />
+            import { LoginContext } from '../context'; <br />
+            <br />
+            const Login = () => { <br />
+            &nbsp;&nbsp;const [showLogin, setShowLogin] =
+            useContext(LoginContext); <br />
+            &nbsp;&nbsp;... <br />
+            }; <br />
+            <br />
+            export default Login;
+          </p>
+          <br />
+          <p class="text">And that's it. Happy days!</p>
+        </div>
+      </div>
+
+      <div class="bottom-content">
+        <div class="avatar-content">
+          <img src="img/me.jpg" alt="" />
+          <p class="author-caption text">
+            Daniel Nolan is a full-stack JavaScript developer who has been
+            writing code since 2019. His blog articles share the knowledge and
+            skills he has learned related to JavaScript and ReactJS coding
+            techniques.
+          </p>
+        </div>
+        <hr />
+        <div class="popular-posts-section">
+          <h5 class="heading">POPULAR POSTS</h5>
+          <div class="popular-posts">
+            <div class="popular-post">
+              <a href="array_methods.html">
+                <img src="img/array-methods-sq.png" alt="" />
+                <p class="caption">JavaScript Array Methods</p>
+              </a>
+            </div>
+            <div class="popular-post">
+              <a href="mutation_observer.html">
+                <img src="img/mutation-observer-sq.png" alt="" />
+                <p class="caption">JavaScript MutationObservers</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="https://www.buymeacoffee.com/nolancode"
+        target="_blank"
+        class="buymeacoffee"
+      >
+        <img src="img/buy-me-a-coffee.png" alt="buy me a coffee" />
+      </a>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="grid-4">
+          <div class="grid-4-col footer-about">
+            <h3 class="title-sm">About</h3>
+            <p class="text">
+              Nolancode can work with you and help to create your next project.
+            </p>
+          </div>
+
+          <div class="grid-4-col footer-links">
+            <h3 class="title-sm">Links</h3>
+            <ul>
+              <li>
+                <a href="index.html#about">About</a>
+              </li>
+              <li>
+                <a href="index.html#services">Services</a>
+              </li>
+              <li>
+                <a href="index.html#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="index.html#blog">Blog</a>
+              </li>
+              <li>
+                <a href="index.html#testimonials">Testimonials</a>
+              </li>
+              <li>
+                <a href="index.html#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid-4-col footer-links">
+            <h3 class="title-sm">Services</h3>
+            <ul>
+              <li>
+                <a href="#" data-toggle="modal" data-target="#webDesign"
+                  >Web Design</a
+                >
+              </li>
+              <li>
+                <a href="#" data-toggle="modal" data-target="#webDev"
+                  >Web Dev</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="grid-4-col footer-newstletter" id="subscribe-form">
+            <h3 class="title-sm">Subscribe</h3>
+            <p class="text">
+              To become notified when any new blog posts and projects are
+              released.
+            </p>
+            <form action="subscribe.php">
+              <div class="footer-input-wrap">
+                <div class="hidden-container">
+                  <input
+                    class="hide"
+                    name="subscribe"
+                    autocomplete="false"
+                    tabindex="-1"
+                  />
+                </div>
+                <input
+                  type="text"
+                  class="footer-input"
+                  placeholder="Email"
+                  id="subscribe-email"
+                  name="subscribe-email"
+                />
+                <a
+                  type="submit"
+                  onclick="validateSubscribe()"
+                  class="input-arrow"
+                >
+                  <i class="fas fa-angle-right"></i>
+                </a>
+              </div>
+              <span id="subscribe-status" class="text"></span><br />
+            </form>
+          </div>
+        </div>
+
+        <div class="bottom-footer">
+          <div class="copyright">
+            <p class="text">
+              <a href="http://nolancode.com/" target="_blank" class="heading"
+                >Nolancode</a
+              >
+              -
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+            </p>
+          </div>
+
+          <div class="followme-wrap">
+            <div class="followme">
+              <h3>Follow me</h3>
+              <span class="footer-line"></span>
+              <div class="social-media">
+                <a href="https://twitter.com/Nolan_code" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/nolan_code" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/daniel-nolan85"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="back-btn-wrap">
+              <a href="#" class="back-btn">
+                <i class="fas fa-chevron-up"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Web Design Modal -->
+    <div
+      class="modal fade"
+      id="webDesign"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Web Design</h3>
+            <p class="text">
+              My mission as a designer is to work closely with each customer to
+              make sure their websites align with their brand's identity. Using
+              various methods and latest technologies to create GUI elements
+              such as menus, tables, forms and widgets.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Web Development Modal -->
+    <div
+      class="modal fade"
+      id="webDev"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Web Development</h3>
+            <p class="text">
+              My mission on the back end is to develop, maintain, test and debug
+              the core of the application. Focusing on the server, database and
+              API integration, and ensuring a high level of security for
+              authorisation and data protection is applied.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Isotope JS -->
+    <script src="isotope.pkgd.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Custom JS-->
+    <script src="script.js"></script>
+  </body>
+</html>
