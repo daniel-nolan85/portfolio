@@ -299,7 +299,9 @@ Look forward to hearing from you!
           <div class="section-body">
             <div class="filter">
               <button class="filter-btn active" data-filter="*">All</button>
-              <button class="filter-btn" data-filter=".mern">MERN Apps</button>
+              <button class="filter-btn" data-filter=".full">
+                Full-Stack Apps
+              </button>
               <button class="filter-btn" data-filter=".mobile">
                 Mobile Apps
               </button>
@@ -313,7 +315,7 @@ Look forward to hearing from you!
             </div>
 
             <div class="grid">
-              <div class="grid-item mern">
+              <div class="grid-item full">
                 <div class="gallery-image">
                   <img src="img/creaite.png" alt="CreAIte logo" />
                   <div class="img-overlay">
@@ -415,7 +417,7 @@ Look forward to hearing from you!
                   </div>
                 </div>
               </div>
-              <div class="grid-item mern mobile">
+              <div class="grid-item full mobile">
                 <div class="gallery-image">
                   <img src="img/nova-quest.png" alt="NovaQuest logo" />
                   <div class="img-overlay">
@@ -449,7 +451,7 @@ Look forward to hearing from you!
                   </div>
                 </div>
               </div>
-              <div class="grid-item mern mobile ecom">
+              <div class="grid-item full mobile ecom">
                 <div class="gallery-image">
                   <img src="img/liic.png" alt="LIIC logo" />
                   <div class="img-overlay">
@@ -641,7 +643,7 @@ Look forward to hearing from you!
                   </div>
                 </div>
               </div>
-              <div class="grid-item mern land">
+              <div class="grid-item full land">
                 <div class="gallery-image">
                   <img src="img/apex-scrap.png" alt="Apex Scrap logo" />
                   <div class="img-overlay">
@@ -660,6 +662,34 @@ Look forward to hearing from you!
                         ></i>
                         <a
                           href="https://github.com/daniel-nolan85/apex-scrap"
+                          target="_blank"
+                        >
+                          <i class="fas fa-code"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item full land">
+                <div class="gallery-image">
+                  <img src="img/gym-buddies-logo.png" alt="Gym Buddies logo" />
+                  <div class="img-overlay">
+                    <a href="https://gym-buddies.org" target="_blank">
+                      <div class="plus"></div>
+                    </a>
+                    <div class="img-description">
+                      <a href="https://gym-buddies.org" target="_blank">
+                        <h3>Gym Buddies</h3>
+                      </a>
+                      <div class="icons">
+                        <i
+                          class="fas fa-info-circle"
+                          data-toggle="modal"
+                          data-target="#gymBuddies"
+                        ></i>
+                        <a
+                          href="https://github.com/daniel-nolan85/GymBuddies"
                           target="_blank"
                         >
                           <i class="fas fa-code"></i>
@@ -1698,6 +1728,40 @@ Look forward to hearing from you!
               Service API to provide real user quotes. Includes fully functional
               contact form using Nodemailer, along with React-Toastify for an
               enhanced user experience.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gym Buddies Modal -->
+    <div
+      class="modal fade"
+      id="gymBuddies"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3 class="heading">Gym Buddies</h3>
+            <p class="text">
+              Full-stack social fitness web app using Django and MySQL on the
+              backend, and Bootstrap/jQuery on the frontend. The app enables
+              users to track workouts, post updates, find workout partners, send
+              messages, and engage via likes, comments, and shares. Designed
+              secure user authentication, real-time features, and RESTful APIs
+              for smooth functionality — demonstrating strong backend logic,
+              social features, and Python proficiency.
             </p>
             <button
               type="button"
