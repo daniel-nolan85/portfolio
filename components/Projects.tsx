@@ -157,7 +157,6 @@ const projects: Project[] = [
     description:
       'Landing page for a spirituality and mindfulness brand. Features Slick Carousel animations, video gallery, timed modal popup, AOS scroll animations, and a fully functional contact form.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Slick Carousel', 'AOS'],
-    liveUrl: 'https://jennjennwellness.com/',
     type: 'Client Site',
   },
   {
@@ -165,7 +164,7 @@ const projects: Project[] = [
     description:
       'Landing page for a COVID test provider. Uses IntersectionObserver API for smooth scroll-triggered animations and includes a fully functional PHP contact form backend.',
     tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'IntersectionObserver'],
-    liveUrl: 'https://www.milowe.co.uk/',
+    liveUrl: 'https://daniel-nolan85.github.io/milowe/',
     codeUrls: [
       { label: 'GitHub', url: 'https://github.com/daniel-nolan85/milowe' },
     ],
@@ -490,17 +489,15 @@ export default function Projects() {
                   <CodeIcon /> {c.label}
                 </a>
               ))}
-              <span
+              <a
+                href='https://gymbuddies.nolancode.com'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='btn-primary'
-                style={{
-                  fontSize: '0.85rem',
-                  padding: '0.6rem 1.25rem',
-                  opacity: 0.6,
-                  cursor: 'not-allowed',
-                }}
+                style={{ fontSize: '0.85rem', padding: '0.6rem 1.25rem' }}
               >
-                App Store — Coming Soon
-              </span>
+                Visit Landing Page →
+              </a>
             </div>
           </motion.div>
         </FadeIn>
