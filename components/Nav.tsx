@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import SolarIcon from './SolarIcon';
 
-const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Contact', href: '#contact' },
+const NAV_LINKS = [
+  { name: 'Services', href: '#services' },
+  { name: 'Process', href: '#process' },
+  { name: 'Work', href: '#projects' },
+  { name: 'About', href: '#about' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export default function Nav() {
@@ -38,7 +39,7 @@ export default function Nav() {
           right: 0,
           zIndex: 50,
           transition: 'all 0.3s ease',
-          background: scrolled ? 'rgba(8, 12, 16, 0.9)' : 'transparent',
+          background: scrolled ? 'rgba(8,12,16,0.92)' : 'transparent',
           backdropFilter: scrolled ? 'blur(20px)' : 'none',
           WebkitBackdropFilter: scrolled ? 'blur(20px)' : 'none',
           borderBottom: scrolled
@@ -50,25 +51,26 @@ export default function Nav() {
           style={{
             maxWidth: '1200px',
             margin: '0 auto',
-            padding: '1rem 1.5rem',
+            padding: '0.875rem 1.5rem',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
           }}
         >
+          {/* Logo */}
           <a
             href='#'
             style={{
-              fontFamily: 'var(--font-display)',
-              fontWeight: 800,
-              fontSize: '1.3rem',
-              color: 'var(--text-primary)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.6rem',
               textDecoration: 'none',
-              letterSpacing: '-0.01em',
-              flexShrink: 0,
             }}
           >
-            Nolan<span style={{ color: 'var(--cyan-ice)' }}>code</span>
+            <SolarIcon size={36} />
+            <span className='nav-wordmark'>
+              Nolan<span>code</span>
+            </span>
           </a>
 
           {/* Desktop links */}
@@ -76,7 +78,7 @@ export default function Nav() {
             id='desktop-nav'
             style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}
           >
-            {navLinks.map((link) => (
+            {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -96,17 +98,19 @@ export default function Nav() {
                   (e.currentTarget.style.color = 'var(--text-secondary)')
                 }
               >
-                {link.label}
+                {link.name}
               </a>
             ))}
             <a
-              href='/daniel-nolan-resume.pdf'
-              target='_blank'
-              rel='noopener noreferrer'
+              href='#booking'
               className='btn-primary'
-              style={{ padding: '0.5rem 1.25rem', fontSize: '0.8rem' }}
+              style={{
+                padding: '0.5rem 1.25rem',
+                fontSize: '0.85rem',
+                whiteSpace: 'nowrap',
+              }}
             >
-              Resume
+              Work with me
             </a>
           </div>
 
@@ -123,8 +127,8 @@ export default function Nav() {
               display: 'none',
               flexDirection: 'column',
               gap: '5px',
-              zIndex: 60,
               position: 'relative',
+              zIndex: 60,
             }}
             aria-label='Toggle menu'
           >
@@ -151,7 +155,7 @@ export default function Nav() {
         </div>
       </nav>
 
-      {/* Mobile fullscreen menu */}
+      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -163,7 +167,7 @@ export default function Nav() {
               position: 'fixed',
               inset: 0,
               zIndex: 49,
-              background: 'rgba(8, 12, 16, 0.98)',
+              background: 'rgba(8,12,16,0.98)',
               backdropFilter: 'blur(20px)',
               display: 'flex',
               flexDirection: 'column',
@@ -173,7 +177,7 @@ export default function Nav() {
               padding: '2rem',
             }}
           >
-            {navLinks.map((link, i) => (
+            {NAV_LINKS.map((link, i) => (
               <motion.a
                 key={link.href}
                 href={link.href}
@@ -196,20 +200,19 @@ export default function Nav() {
                   (e.currentTarget.style.color = 'var(--text-primary)')
                 }
               >
-                {link.label}
+                {link.name}
               </motion.a>
             ))}
             <motion.a
-              href='https://daniel-nolan85.github.io/portfolio/Daniel%20Nolan%20Resume.pdf'
-              target='_blank'
-              rel='noopener noreferrer'
+              href='#booking'
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: navLinks.length * 0.07 }}
+              transition={{ delay: NAV_LINKS.length * 0.07 }}
               className='btn-primary'
               style={{ marginTop: '1rem' }}
+              onClick={() => setMenuOpen(false)}
             >
-              Resume
+              Work with me
             </motion.a>
           </motion.div>
         )}

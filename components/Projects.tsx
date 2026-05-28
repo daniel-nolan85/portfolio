@@ -19,7 +19,7 @@ const projects: Project[] = [
   {
     title: 'Gym Buddies',
     description:
-      'A full-featured social fitness platform for iOS and Android. Users can track workouts, follow friends, share progress posts with media carousels, react and comment in real time, join group chats with @mentions and swipe-to-quote, follow AI-generated workout and diet plans, track nutrition macros, and earn achievements and streaks. Completely free for all users.',
+      'A full-featured social fitness platform for iOS and Android. Users can track workouts, follow friends, share progress posts with media carousels, react and comment in real time, join group chats with @mentions and swipe-to-quote, follow AI-generated workout and diet plans, track nutrition macros, and earn achievements and streaks.',
     tags: [
       'React Native',
       'Expo',
@@ -88,7 +88,8 @@ const projects: Project[] = [
         url: 'https://github.com/daniel-nolan85/CreAIte-back',
       },
     ],
-    liveUrl: 'https://creaite.media/',
+    // liveUrl:
+    //   'https://creaite-front-o553fzcfz-daniel-nolan-s-projects.vercel.app/',
     type: 'Full-Stack App',
   },
   {

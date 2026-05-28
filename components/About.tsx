@@ -6,7 +6,7 @@ const stats = [
   { value: '6+', label: 'Years building' },
   { value: '14+', label: 'Projects shipped' },
   { value: '5★', label: 'Client reviews' },
-  { value: '2', label: 'Apps in development' },
+  { value: '100%', label: 'Remote friendly' },
 ];
 
 export default function About() {
@@ -24,7 +24,6 @@ export default function About() {
           {/* Left: image + stats */}
           <FadeIn direction='right'>
             <div style={{ position: 'relative' }}>
-              {/* Photo frame */}
               <div
                 style={{
                   position: 'relative',
@@ -54,7 +53,6 @@ export default function About() {
                     filter: 'grayscale(20%) contrast(1.05)',
                   }}
                 />
-                {/* Corner accent */}
                 <div
                   style={{
                     position: 'absolute',
@@ -158,11 +156,11 @@ export default function About() {
                     fontSize: '0.975rem',
                   }}
                 >
-                  I've been building on the web since 2019 — starting with
-                  client sites and growing into full-stack applications,
-                  real-time systems, and mobile apps. Over six years I've
-                  shipped everything from e-commerce platforms and dating apps
-                  to AI-powered creative tools and fitness trackers.
+                  I'm Daniel — a full-stack developer with over six years of
+                  experience building for the web and mobile. I've shipped
+                  everything from client landing pages and business websites to
+                  complex full-stack applications, real-time platforms, and
+                  native mobile apps.
                 </p>
                 <p
                   style={{
@@ -171,21 +169,20 @@ export default function About() {
                     fontSize: '0.975rem',
                   }}
                 >
-                  Today I work as a web content developer at Gap Inc. by day,
-                  and by night I run{' '}
+                  I work under{' '}
                   <span
                     style={{ color: 'var(--text-primary)', fontWeight: 500 }}
                   >
                     Nolancode
                   </span>{' '}
-                  — an indie dev operation where I design, build, and ship my
-                  own apps. My current focus is{' '}
+                  — a one-person development studio focused on building
+                  high-quality digital products for businesses and founders who
+                  care about getting it right. My current flagship product is{' '}
                   <span style={{ color: 'var(--cyan-ice)', fontWeight: 500 }}>
                     Gym Buddies
                   </span>
-                  , a social fitness platform for iOS and Android built with
-                  React Native, featuring real-time chat, AI-generated workout
-                  and diet plans, completely free for all users.
+                  , a social fitness platform for iOS and Android — built from
+                  architecture to App Store submission.
                 </p>
                 <p
                   style={{
@@ -194,10 +191,11 @@ export default function About() {
                     fontSize: '0.975rem',
                   }}
                 >
-                  I care deeply about the craft — clean architecture, thoughtful
-                  UX, and products that actually solve problems for real people.
-                  Based in Henderson, Nevada with my family, and always building
-                  something new.
+                  When I take on client work, I bring that same ownership
+                  mentality. I care about your project the way I care about my
+                  own — clean code, thoughtful UX, honest communication, and a
+                  result you're genuinely proud of. Based in Henderson, Nevada,
+                  working with clients worldwide.
                 </p>
               </div>
 
@@ -209,16 +207,21 @@ export default function About() {
                   flexWrap: 'wrap',
                 }}
               >
-                <a
-                  href='/daniel-nolan-resume.pdf'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='btn-primary'
-                >
-                  Download Resume
+                <a href='#booking' className='btn-primary'>
+                  Book a free call
+                  <svg
+                    width='16'
+                    height='16'
+                    viewBox='0 0 24 24'
+                    fill='none'
+                    stroke='currentColor'
+                    strokeWidth='2.5'
+                  >
+                    <path d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' />
+                  </svg>
                 </a>
-                <a href='#contact' className='btn-secondary'>
-                  Let's talk
+                <a href='#projects' className='btn-secondary'>
+                  See my work
                 </a>
               </div>
             </div>

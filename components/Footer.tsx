@@ -1,5 +1,7 @@
 'use client';
 
+import SolarIcon from './SolarIcon';
+
 export default function Footer() {
   return (
     <footer
@@ -25,15 +27,33 @@ export default function Footer() {
         <a
           href='#'
           style={{
-            fontFamily: 'var(--font-display)',
-            fontWeight: 800,
-            fontSize: '1rem',
-            color: 'var(--text-primary)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
             textDecoration: 'none',
-            letterSpacing: '-0.02em',
           }}
         >
-          Nolan<span style={{ color: 'var(--cyan-ice)' }}>code</span>
+          <SolarIcon size={26} />
+          <span
+            style={{
+              fontFamily: 'DuneRise, serif',
+              fontSize: '13px',
+              color: 'rgba(248,250,252,0.95)',
+              letterSpacing: '1px',
+              textShadow: '0 0 12px rgba(103,232,249,0.4)',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            Nolan
+            <span
+              style={{
+                color: '#67E8F9',
+                textShadow: '0 0 12px rgba(103,232,249,0.7)',
+              }}
+            >
+              code
+            </span>
+          </span>
         </a>
 
         <p
@@ -43,13 +63,15 @@ export default function Footer() {
             fontFamily: 'var(--font-mono)',
           }}
         >
-          © {new Date().getFullYear()} Daniel Nolan. Built with Next.js.
+          © {new Date().getFullYear()} Nolancode. All rights reserved.
         </p>
 
         <div style={{ display: 'flex', gap: '1.5rem' }}>
           {[
+            { label: 'Services', href: '#services' },
+            { label: 'Process', href: '#process' },
+            { label: 'Work', href: '#projects' },
             { label: 'About', href: '#about' },
-            { label: 'Projects', href: '#projects' },
             { label: 'Contact', href: '#contact' },
           ].map((link) => (
             <a
