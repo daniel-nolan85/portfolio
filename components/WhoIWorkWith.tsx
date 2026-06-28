@@ -90,9 +90,8 @@ export default function WhoIWorkWith() {
                 fontWeight: 300,
               }}
             >
-              I do my best work with clients who value quality, communicate
-              openly, and understand that good development takes a little time
-              to get right.
+              I work best with clients who value quality, clear communication,
+              and a smooth, efficient delivery process.
             </p>
           </div>
         </FadeIn>

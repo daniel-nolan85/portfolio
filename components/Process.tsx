@@ -365,35 +365,6 @@ export default function Process() {
                     </p>
                   </div>
                 ))}
-                <div
-                  style={{
-                    borderTop: '1px solid rgba(255,255,255,0.06)',
-                    paddingTop: '1.5rem',
-                    marginTop: '0.5rem',
-                  }}
-                >
-                  <a
-                    href='#booking'
-                    className='btn-primary'
-                    style={{
-                      width: '100%',
-                      justifyContent: 'center',
-                      fontSize: '0.875rem',
-                    }}
-                  >
-                    Book a free call
-                    <svg
-                      width='14'
-                      height='14'
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      stroke='currentColor'
-                      strokeWidth='2.5'
-                    >
-                      <path d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' />
-                    </svg>
-                  </a>
-                </div>
               </div>
             </div>
           </FadeIn>

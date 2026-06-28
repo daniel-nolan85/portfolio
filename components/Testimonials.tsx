@@ -5,6 +5,30 @@ import FadeIn from './FadeIn';
 const testimonials = [
   {
     quote:
+      'I worked with Daniel as a member of my frontend development team, and found him to be a standout developer. Daniel is always eager to learn more, pick up work, and tackle problems head on without uncertainty or doubt. On top of all of that, he is a great communicator and does not hesitate to reach out to the appropriate people for guidance or information necessary when needed. He is self sufficient, responsible and a quick learner. All in all, Daniel is the exact kind of Developer you want supporting you: Curious, Eager and Reliable.',
+    name: 'Azzi Haq',
+    title: 'Senior Frontend Developer',
+    company: 'Gap Inc.',
+    initials: 'AH',
+  },
+  {
+    quote:
+      'Daniel consistently demonstrated a strong desire to learn and quickly absorbed new concepts and technologies. He is highly collaborative, receptive to feedback, and always willing to help teammates solve problems. What impressed me most was his ability to take ownership of new challenges and become productive in a short amount of time. Daniel was a valued member of the team, and I would welcome the opportunity to work with him again in the future.',
+    name: 'Laurence Macaspac',
+    title: 'Senior Frontend Developer',
+    company: 'Gap Inc.',
+    initials: 'LM',
+  },
+  {
+    quote:
+      'Daniel is a knowledgeable Front-End Developer with a great attitude and strong work ethic. What I appreciated most about working with him was his willingness to take on new challenges. He was always asking how he could help, looking for additional work, and eager to contribute wherever he was needed. Daniel is also genuinely kind, easy to work with, and a true team player. I would gladly work with Daniel again and would highly recommend him to any team looking for a skilled developer who is proactive, dependable, and always willing to go the extra mile.',
+    name: 'Maja Franklin',
+    title: 'Product Manager & Frontend Developer',
+    company: 'Gap Inc.',
+    initials: 'MF',
+  },
+  {
+    quote:
       "Daniel worked with us as a front end developer and web designer on large scale migration and redesign projects for different verticals. He quickly learned our proprietary platform, adapted to complex workflows, and became a reliable contributor the team could count on. Throughout his time with us, Daniel consistently delivered high quality work across a wide range of projects. He's sharp, dependable, very professional and most importantly he gets it! Any company would be lucky to have him on their team.",
     name: 'Bilal Tawil',
     title: 'Art Director',
@@ -108,6 +132,8 @@ export default function Testimonials() {
                   display: 'flex',
                   flexDirection: 'column',
                   transition: 'all 0.3s ease',
+                  position: 'relative',
+                  overflow: 'hidden',
                 }}
                 onMouseEnter={(e) => {
                   (e.currentTarget as HTMLDivElement).style.transform =
@@ -118,18 +144,30 @@ export default function Testimonials() {
                 }}
               >
                 {/* Quote mark */}
-                <div
+                <svg
+                  width='140'
+                  height='120'
+                  viewBox='0 0 140 120'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
                   style={{
-                    fontFamily: 'var(--font-display)',
-                    fontSize: '3rem',
-                    lineHeight: 1,
-                    color: 'var(--cyan-ice)',
-                    opacity: 0.3,
-                    marginBottom: '0.5rem',
+                    position: 'absolute',
+                    top: '1rem',
+                    left: '0.5rem',
+                    opacity: 0.07,
+                    pointerEvents: 'none',
                   }}
                 >
-                  "
-                </div>
+                  <text
+                    x='0'
+                    y='110'
+                    fontSize='160'
+                    fontFamily='var(--font-display)'
+                    fill='var(--cyan-ice)'
+                  >
+                    "
+                  </text>
+                </svg>
 
                 <p
                   style={{
