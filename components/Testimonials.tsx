@@ -5,6 +5,14 @@ import FadeIn from './FadeIn';
 const testimonials = [
   {
     quote:
+      "Daniel is a talented Front-End Developer with a strong technical foundation, but what really sets him apart is his attitude. He consistently looked for ways to contribute beyond his assigned work, regularly asking how he could help and volunteering to take on new challenges. He approached every opportunity with curiosity, enthusiasm, and a genuine desire to help the team succeed. Daniel is also a quick learner who remained calm, adaptable, and focused throughout fast-paced situations with evolving requirements and tight deadlines, delivering quality work while maintaining a positive attitude. Beyond his technical skills, Daniel is simply a great person to work with — kind, approachable, and brings a positive energy that makes collaboration easy. I wouldn't hesitate to work with Daniel again, and I highly recommend him to any team looking for a skilled, dependable engineer who takes initiative, embraces challenges, and is a genuinely great teammate.",
+    name: 'Jenn Palbusa',
+    title: 'Senior Manager, Web Content Development',
+    company: 'Gap Inc.',
+    initials: 'JP',
+  },
+  {
+    quote:
       'I worked with Daniel as a member of my frontend development team, and found him to be a standout developer. Daniel is always eager to learn more, pick up work, and tackle problems head on without uncertainty or doubt. On top of all of that, he is a great communicator and does not hesitate to reach out to the appropriate people for guidance or information necessary when needed. He is self sufficient, responsible and a quick learner. All in all, Daniel is the exact kind of Developer you want supporting you: Curious, Eager and Reliable.',
     name: 'Azzi Haq',
     title: 'Senior Frontend Developer',
