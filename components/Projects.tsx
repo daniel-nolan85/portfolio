@@ -37,9 +37,9 @@ const projects: Project[] = [
     type: 'Mobile App',
   },
   {
-    title: 'Community Copilot',
+    title: 'eLLVate',
     description:
-      'A community engagement platform for residential neighborhoods, starting with Lake Las Vegas. Residents get a forum organized into channels, an events calendar with RSVPs, gamified neighborhood missions with photo check-ins and streaks, a leaderboard, a local services directory, HOA petitions, a weekly digest, and a built-in AI assistant grounded in the community’s real content.',
+      'A community engagement platform built specifically for Lake Las Vegas residents. eLLVate provides a forum organized into channels, an events calendar with RSVPs, gamified neighborhood missions with photo check-ins and streaks, a leaderboard, a local services directory, HOA petitions, a weekly digest, and a built-in AI assistant grounded in the community’s real content.',
     tags: [
       'React Native',
       'Expo',
@@ -51,7 +51,7 @@ const projects: Project[] = [
       'Next.js',
       'Tailwind CSS',
     ],
-    liveUrl: 'https://www.community-copilot.com',
+    liveUrl: 'https://www.ellvate.com',
     status: 'Coming to App Store',
     type: 'Mobile App',
   },
