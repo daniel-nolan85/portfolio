@@ -5,7 +5,7 @@ import FadeIn from './FadeIn';
 const testimonials = [
   {
     quote:
-      "Daniel is a talented Front-End Developer with a strong technical foundation, but what really sets him apart is his attitude. He consistently looked for ways to contribute beyond his assigned work, regularly asking how he could help and volunteering to take on new challenges. He approached every opportunity with curiosity, enthusiasm, and a genuine desire to help the team succeed. Daniel is also a quick learner who remained calm, adaptable, and focused throughout fast-paced situations with evolving requirements and tight deadlines, delivering quality work while maintaining a positive attitude. Beyond his technical skills, Daniel is simply a great person to work with — kind, approachable, and brings a positive energy that makes collaboration easy. I wouldn't hesitate to work with Daniel again, and I highly recommend him to any team looking for a skilled, dependable engineer who takes initiative, embraces challenges, and is a genuinely great teammate.",
+      "Daniel is a talented Front-End Developer with a strong technical foundation, but what really sets him apart is his attitude. He consistently looks for ways to contribute beyond his assigned work, regularly asks how he can help and volunteers to take on new challenges. He approaches every opportunity with curiosity, enthusiasm, and a genuine desire to help the team succeed. Daniel is also a quick learner who remains calm, adaptable, and focused throughout fast-paced situations with evolving requirements and tight deadlines, delivering quality work while maintaining a positive attitude. Beyond his technical skills, Daniel is simply a great person to work with — kind, approachable, and brings a positive energy that makes collaboration easy. I wouldn't hesitate to work with Daniel again, and I highly recommend him to any team looking for a skilled, dependable engineer who takes initiative, embraces challenges, and is a genuinely great teammate.",
     name: 'Jenn Palbusa',
     title: 'Senior Manager, Web Content Development',
     company: 'Gap Inc.',
@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     quote:
-      'Daniel consistently demonstrated a strong desire to learn and quickly absorbed new concepts and technologies. He is highly collaborative, receptive to feedback, and always willing to help teammates solve problems. What impressed me most was his ability to take ownership of new challenges and become productive in a short amount of time. Daniel was a valued member of the team, and I would welcome the opportunity to work with him again in the future.',
+      'Daniel consistently demonstrates a strong desire to learn and quickly absorbs new concepts and technologies. He is highly collaborative, receptive to feedback, and always willing to help teammates solve problems. What impressed me most was his ability to take ownership of new challenges and become productive in a short amount of time. Daniel was a valued member of the team, and I would welcome the opportunity to work with him again in the future.',
     name: 'Laurence Macaspac',
     title: 'Senior Frontend Developer',
     company: 'Gap Inc.',
@@ -61,7 +61,7 @@ const testimonials = [
   },
   {
     quote:
-      'I have used Daniel to construct two of my websites to which he has followed the spec I supplied and also introduced me to different innovations along the way. Daniel has provided me and continues to provide an excellent service to update and maintain my sites. Daniel is always on hand when I require his assistance and supports my team very well.',
+      'I have used Daniel to construct two of my websites to which he has followed the spec I supplied and also introduced me to different innovations along the way. Daniel has provided me an excellent service to update and maintain my sites. Daniel is always on hand when I require his assistance and supports my team very well.',
     name: 'Michael Knapton',
     title: 'Director',
     company: 'Gents of Brooklyn Academy & Green Point',

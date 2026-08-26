@@ -37,6 +37,25 @@ const projects: Project[] = [
     type: 'Mobile App',
   },
   {
+    title: 'Community Copilot',
+    description:
+      'A community engagement platform for residential neighborhoods, starting with Lake Las Vegas. Residents get a forum organized into channels, an events calendar with RSVPs, gamified neighborhood missions with photo check-ins and streaks, a leaderboard, a local services directory, HOA petitions, a weekly digest, and a built-in AI assistant grounded in the community’s real content.',
+    tags: [
+      'React Native',
+      'Expo',
+      'TypeScript',
+      'Supabase',
+      'PostgreSQL',
+      'Row Level Security',
+      'Clerk',
+      'Next.js',
+      'Tailwind CSS',
+    ],
+    liveUrl: 'https://www.community-copilot.com',
+    status: 'Coming to App Store',
+    type: 'Mobile App',
+  },
+  {
     title: 'NovaQuest',
     description:
       'A space-themed educational mobile app for young explorers, leveraging the NASA API to surface astronomy pictures, Mars Rover photos, ISS tracking, asteroid data, and detailed planetary info. Features missions, XP-based ranking, achievements, interactive games including trivia, drag-and-drop challenges, and an asteroid dodger built with Matter.js physics.',
@@ -158,17 +177,6 @@ const projects: Project[] = [
     description:
       'Landing page for a spirituality and mindfulness brand. Features Slick Carousel animations, video gallery, timed modal popup, AOS scroll animations, and a fully functional contact form.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Slick Carousel', 'AOS'],
-    type: 'Client Site',
-  },
-  {
-    title: 'Milowe',
-    description:
-      'Landing page for a COVID test provider. Uses IntersectionObserver API for smooth scroll-triggered animations and includes a fully functional PHP contact form backend.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'IntersectionObserver'],
-    liveUrl: 'https://daniel-nolan85.github.io/milowe/',
-    codeUrls: [
-      { label: 'GitHub', url: 'https://github.com/daniel-nolan85/milowe' },
-    ],
     type: 'Client Site',
   },
   {
