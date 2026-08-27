@@ -51,7 +51,7 @@ const projects: Project[] = [
       'Next.js',
       'Tailwind CSS',
     ],
-    liveUrl: 'https://www.ellvate.com',
+    liveUrl: 'https://ellvate.com',
     status: 'Coming to App Store',
     type: 'Mobile App',
   },
