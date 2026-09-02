@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Nolancode — Apps & Websites Built for Your Business',
   description:
-    'Freelance full-stack developer based in Henderson, Nevada. I build mobile apps, web applications, and landing pages for startups, founders, and businesses. Fast turnaround, transparent pricing, no agency overhead.',
+    'Freelance full-stack developer. I build mobile apps, web applications, and landing pages for startups, founders, and businesses. Fast turnaround, transparent pricing, no agency overhead.',
   icons: {
     icon: '/favicon.svg',
     apple: '/favicon.svg',

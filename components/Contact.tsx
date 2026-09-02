@@ -170,7 +170,7 @@ export default function Contact() {
                     letterSpacing: '0.08em',
                   }}
                 >
-                  LOCATION
+                  AVAILABILITY
                 </p>
                 <p
                   style={{
@@ -179,7 +179,7 @@ export default function Contact() {
                     fontWeight: 600,
                   }}
                 >
-                  Henderson, Nevada
+                  Remote · Worldwide
                 </p>
                 <p
                   style={{
@@ -188,7 +188,7 @@ export default function Contact() {
                     marginTop: '0.25rem',
                   }}
                 >
-                  Open to remote opportunities worldwide
+                  Currently accepting new projects
                 </p>
               </div>
 

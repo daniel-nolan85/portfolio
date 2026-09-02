@@ -194,8 +194,8 @@ export default function About() {
                   When I take on client work, I bring that same ownership
                   mentality. I care about your project the way I care about my
                   own — clean code, thoughtful UX, honest communication, and a
-                  result you're genuinely proud of. Based in Henderson, Nevada,
-                  working with clients worldwide.
+                  result you're genuinely proud of. Working with clients
+                  worldwide.
                 </p>
               </div>
 

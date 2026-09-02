@@ -285,8 +285,8 @@ export default function Hero() {
               marginBottom: '2.5rem',
             }}
           >
-            I'm Daniel — a full-stack developer based in Henderson, Nevada,
-            building apps and websites under{' '}
+            I'm Daniel — a full-stack developer building apps and websites
+            under{' '}
             <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
               Nolancode
             </span>

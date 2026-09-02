@@ -32,7 +32,7 @@ const projects: Project[] = [
       'Inngest',
     ],
     codeUrls: [{ label: 'GitHub', url: 'https://github.com/daniel-nolan85' }],
-    status: 'Coming to App Store',
+    status: 'Live on iOS',
     featured: true,
     type: 'Mobile App',
   },
@@ -486,6 +486,15 @@ export default function Projects() {
             </div>
 
             <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+              <a
+                href='https://apps.apple.com/us/app/gym-buddies-workout-social/id6788955105'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='btn-primary'
+                style={{ fontSize: '0.85rem', padding: '0.6rem 1.25rem' }}
+              >
+                Download on the App Store →
+              </a>
               {featured.codeUrls?.map((c) => (
                 <a
                   key={c.label}
@@ -502,7 +511,7 @@ export default function Projects() {
                 href='https://gymbuddies.nolancode.com'
                 target='_blank'
                 rel='noopener noreferrer'
-                className='btn-primary'
+                className='btn-secondary'
                 style={{ fontSize: '0.85rem', padding: '0.6rem 1.25rem' }}
               >
                 Visit Landing Page →
