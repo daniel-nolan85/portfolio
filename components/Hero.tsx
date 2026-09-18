@@ -59,7 +59,7 @@ const socials = [
     ),
   },
   {
-    href: 'https://www.facebook.com/nolan_code',
+    href: 'https://www.facebook.com/profile.php?id=61594413063214',
     label: 'Facebook',
     icon: (
       <svg width='18' height='18' viewBox='0 0 24 24' fill='currentColor'>
