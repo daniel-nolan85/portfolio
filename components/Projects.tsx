@@ -598,9 +598,18 @@ export default function Projects() {
                 }}
               >
                 {/* Type badge */}
-                <div style={{ marginBottom: '0.75rem' }}>
+                <div
+                  style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    alignItems: 'center',
+                    gap: '0.4rem',
+                    marginBottom: '0.75rem',
+                  }}
+                >
                   <span
                     style={{
+                      whiteSpace: 'nowrap',
                       fontSize: '0.7rem',
                       fontFamily: 'var(--font-mono)',
                       letterSpacing: '0.08em',
@@ -616,7 +625,7 @@ export default function Projects() {
                   {project.status && (
                     <span
                       style={{
-                        marginLeft: '0.4rem',
+                        whiteSpace: 'nowrap',
                         fontSize: '0.65rem',
                         fontFamily: 'var(--font-mono)',
                         color: '#4ADE80',
