@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 // What I build — client-focused outcomes
@@ -71,16 +71,12 @@ const socials = [
 
 // ── Solar System ──────────────────────────────────────────────────────────────
 
+// Fixed (not random) start offsets that spread the planets around their
+// orbits — Math.random() here causes a hydration mismatch.
+const planetDelays = [-20, -115, -110, -370];
+
 function SolarSystem() {
-  const delays = useMemo(
-    () => [
-      -(Math.random() * 130),
-      -(Math.random() * 210),
-      -(Math.random() * 320),
-      -(Math.random() * 460),
-    ],
-    [],
-  );
+  const delays = planetDelays;
 
   return (
     <div className='solar-wrapper' aria-hidden='true'>
@@ -122,7 +118,9 @@ function SolarSystem() {
       </div>
       <p className='solar-tagline'>BUILD · SHIP · REPEAT</p>
 
-      <style>{`
+      {/* dangerouslySetInnerHTML so the quotes in this CSS aren't HTML-escaped
+          on the server, which would cause a hydration mismatch. */}
+      <style dangerouslySetInnerHTML={{ __html: `
         @font-face {
           font-family: 'DuneRise';
           src: url('/fonts/Dune_Rise.otf') format('opentype');
@@ -153,7 +151,7 @@ function SolarSystem() {
         .solar-tagline { margin-top: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 400; letter-spacing: 7px; color: rgba(103,232,249,0.5); text-align: center; text-transform: uppercase; }
         @media (max-width: 1100px) { .solar-system { transform: skewX(-20deg) scale(0.8); width: 420px; height: 420px; } }
         @media (max-width: 768px) { .solar-system { transform: skewX(-20deg) scale(0.55); width: 290px; height: 290px; } .solar-wrapper { margin-bottom: 1rem; } }
-      `}</style>
+      ` }} />
     </div>
   );
 }
