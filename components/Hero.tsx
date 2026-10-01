@@ -73,7 +73,7 @@ const socials = [
 
 // Fixed (not random) start offsets that spread the planets around their
 // orbits — Math.random() here causes a hydration mismatch.
-const planetDelays = [-20, -115, -110, -370];
+const planetDelays = [-10, -57.5, -55, -185];
 
 function SolarSystem() {
   const delays = planetDelays;
@@ -138,10 +138,10 @@ function SolarSystem() {
         .orbit-3 { width: 410px; height: 410px; border-width: 1px; border-color: rgba(103,232,249,0.25) rgba(103,232,249,0.04) rgba(103,232,249,0.04) rgba(103,232,249,0.25); }
         .orbit-4 { width: 510px; height: 510px; border-width: 1px; border-color: rgba(148,163,184,0.18) rgba(148,163,184,0.03) rgba(148,163,184,0.03) rgba(148,163,184,0.18); }
         .planet-arm { position: absolute; width: 0; height: 0; animation: orbit-spin linear infinite; }
-        .planet-arm-1 { animation-duration: 130s; }
-        .planet-arm-2 { animation-duration: 210s; }
-        .planet-arm-3 { animation-duration: 320s; }
-        .planet-arm-4 { animation-duration: 460s; }
+        .planet-arm-1 { animation-duration: 65s; }
+        .planet-arm-2 { animation-duration: 105s; }
+        .planet-arm-3 { animation-duration: 160s; }
+        .planet-arm-4 { animation-duration: 230s; }
         @keyframes orbit-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .planet { position: absolute; border-radius: 50%; transform: translateY(-50%); }
         .planet-1 { width: 14px; height: 14px; top: -115px; left: -7px; background: radial-gradient(circle at 35% 35%, #ffffff, #67E8F9); box-shadow: 0 0 8px rgba(103,232,249,0.9), 0 0 18px rgba(103,232,249,0.5); }
