@@ -9,6 +9,7 @@ type Project = {
   description: string;
   tags: string[];
   liveUrl?: string;
+  appStoreUrl?: string;
   codeUrls?: { label: string; url: string }[];
   status?: string;
   featured?: boolean;
@@ -32,7 +33,7 @@ const projects: Project[] = [
       'Inngest',
     ],
     codeUrls: [{ label: 'GitHub', url: 'https://github.com/daniel-nolan85' }],
-    status: 'Live on iOS',
+    status: 'Live on iOS & Android',
     featured: true,
     type: 'Mobile App',
   },
@@ -52,7 +53,8 @@ const projects: Project[] = [
       'Tailwind CSS',
     ],
     liveUrl: 'https://ellvate.com',
-    status: 'Coming to App Store',
+    appStoreUrl: 'https://apps.apple.com/us/app/ellvate/id6805611205',
+    status: 'Live on iOS · Android coming soon',
     type: 'Mobile App',
   },
   {
@@ -495,6 +497,15 @@ export default function Projects() {
               >
                 Download on the App Store →
               </a>
+              <a
+                href='https://play.google.com/store/apps/details?id=com.nolancode.gymbuddies'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='btn-primary'
+                style={{ fontSize: '0.85rem', padding: '0.6rem 1.25rem' }}
+              >
+                Get it on Google Play →
+              </a>
               {featured.codeUrls?.map((c) => (
                 <a
                   key={c.label}
@@ -699,6 +710,31 @@ export default function Projects() {
                       }
                     >
                       <ExternalIcon /> Live
+                    </a>
+                  )}
+                  {project.appStoreUrl && (
+                    <a
+                      href={project.appStoreUrl}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.3rem',
+                        fontSize: '0.78rem',
+                        color: 'var(--cyan-ice)',
+                        textDecoration: 'none',
+                        fontFamily: 'var(--font-mono)',
+                        transition: 'opacity 0.2s',
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.opacity = '0.7')
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.opacity = '1')
+                      }
+                    >
+                      <ExternalIcon /> App Store
                     </a>
                   )}
                   {project.codeUrls?.map((c) => (

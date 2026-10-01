@@ -182,7 +182,7 @@ export default function About() {
                     Gym Buddies
                   </span>
                   , a social fitness platform for iOS and Android — built from
-                  architecture to App Store submission.
+                  architecture to launch on the App Store and Google Play.
                 </p>
                 <p
                   style={{
