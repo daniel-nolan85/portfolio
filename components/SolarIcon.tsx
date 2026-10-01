@@ -1,12 +1,10 @@
 'use client';
 
-import { useMemo } from 'react';
+// Fixed (not random) start offsets so server and client render the same
+// markup — Math.random() here causes a hydration mismatch.
+const delays = [-3, -9];
 
 export default function SolarIcon({ size = 36 }: { size?: number }) {
-  const delays = useMemo(
-    () => [-(Math.random() * 8), -(Math.random() * 14)],
-    [],
-  );
 
   const scale = size / 36;
 
