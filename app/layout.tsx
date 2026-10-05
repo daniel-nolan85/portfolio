@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Nolancode — Apps & Websites Built for Your Business',
+  title: 'Nolancode - Apps & Websites Built for Your Business',
   description:
     'Freelance full-stack developer. I build mobile apps, web applications, and landing pages for startups, founders, and businesses. Fast turnaround, transparent pricing, no agency overhead.',
   icons: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Daniel Nolan', url: 'https://nolancode.com' }],
   creator: 'Daniel Nolan',
   openGraph: {
-    title: 'Nolancode — Apps & Websites Built for Your Business',
+    title: 'Nolancode - Apps & Websites Built for Your Business',
     description:
       'Freelance full-stack developer building mobile apps, web applications, and landing pages for startups and businesses. Fast turnaround, transparent pricing.',
     type: 'website',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nolancode — Apps & Websites Built for Your Business',
+    title: 'Nolancode - Apps & Websites Built for Your Business',
     description:
       'Freelance full-stack developer building mobile apps, web applications, and landing pages for startups and businesses.',
     creator: '@nolan_code',

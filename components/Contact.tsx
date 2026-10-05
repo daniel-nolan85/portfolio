@@ -134,7 +134,7 @@ export default function Contact() {
               }}
             >
               Whether you have a project in mind, want to discuss a role, or
-              just want to say hello — my inbox is always open.
+              just want to say hello - my inbox is always open.
             </p>
           </div>
         </FadeIn>

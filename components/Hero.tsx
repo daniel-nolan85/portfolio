@@ -266,7 +266,7 @@ export default function Hero() {
               color: 'var(--text-primary)',
             }}
           >
-            From idea to launch —<br />
+            From idea to launch -<br />
             <span className='gradient-text'>I build what your</span>
             <br />
             <span className='gradient-text'>business needs.</span>
@@ -310,7 +310,7 @@ export default function Hero() {
               marginBottom: '2.5rem',
             }}
           >
-            I'm Daniel — a full-stack developer building apps and websites under{' '}
+            I'm Daniel - a full-stack developer building apps and websites under{' '}
             <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
               Nolancode
             </span>
