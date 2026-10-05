@@ -9,7 +9,7 @@ const steps = [
     title: 'Discovery Call',
     subtitle: 'Free · 30 minutes',
     description:
-      "We start with a conversation — no pitch, no pressure. You tell me about your project, your goals, and your timeline. I ask questions, share honest thoughts, and we figure out if we're a good fit.",
+      "We start with a conversation - no pitch, no pressure. You tell me about your project, your goals, and your timeline. I ask questions, share honest thoughts, and we figure out if we're a good fit.",
     icon: (
       <svg
         width='22'
@@ -28,7 +28,7 @@ const steps = [
     title: 'Proposal & Timeline',
     subtitle: 'Within 48 hours',
     description:
-      "After our call I put together a clear proposal — scope, deliverables, timeline, and price. No hidden costs, no vague estimates. You'll know exactly what you're getting before anything begins.",
+      "After our call I put together a clear proposal - scope, deliverables, timeline, and price. No hidden costs, no vague estimates. You'll know exactly what you're getting before anything begins.",
     icon: (
       <svg
         width='22'
@@ -47,7 +47,7 @@ const steps = [
     title: 'Development',
     subtitle: 'Regular updates throughout',
     description:
-      "Once we agree on scope I get to work. You'll get regular progress updates — no disappearing acts, no surprises. I build in stages so you can review and give feedback as we go.",
+      "Once we agree on scope I get to work. You'll get regular progress updates - no disappearing acts, no surprises. I build in stages so you can review and give feedback as we go.",
     icon: (
       <svg
         width='22'
@@ -66,7 +66,7 @@ const steps = [
     title: 'Review & Revisions',
     subtitle: 'Your feedback matters',
     description:
-      'Before launch you get a chance to review everything and request changes. I want you to be genuinely happy with the result — not just technically complete, but right for your business.',
+      'Before launch you get a chance to review everything and request changes. I want you to be genuinely happy with the result - not just technically complete, but right for your business.',
     icon: (
       <svg
         width='22'
@@ -86,7 +86,7 @@ const steps = [
     title: 'Launch & Handover',
     subtitle: 'You own everything',
     description:
-      'We deploy, go live, and I hand over everything — code, credentials, documentation. Your project is yours completely. No lock-in, no hidden dependencies on me continuing to be involved.',
+      'We deploy, go live, and I hand over everything - code, credentials, documentation. Your project is yours completely. No lock-in, no hidden dependencies on me continuing to be involved.',
     icon: (
       <svg
         width='22'
@@ -328,12 +328,12 @@ export default function Process() {
                     icon: '⚡',
                     text: 'Fast turnaround without cutting corners',
                   },
-                  { icon: '💬', text: 'Regular updates — no radio silence' },
+                  { icon: '💬', text: 'Regular updates - no radio silence' },
                   {
                     icon: '🎯',
                     text: 'Focused on your goals, not just the brief',
                   },
-                  { icon: '📦', text: 'Clean handover — you own everything' },
+                  { icon: '📦', text: 'Clean handover - you own everything' },
                   { icon: '🤝', text: 'A partner, not just a contractor' },
                 ].map((point) => (
                   <div

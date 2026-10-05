@@ -156,7 +156,7 @@ export default function About() {
                     fontSize: '0.975rem',
                   }}
                 >
-                  I'm Daniel — a full-stack developer with over six years of
+                  I'm Daniel - a full-stack developer with over six years of
                   experience building for the web and mobile. I've shipped
                   everything from client landing pages and business websites to
                   complex full-stack applications, real-time platforms, and
@@ -175,13 +175,13 @@ export default function About() {
                   >
                     Nolancode
                   </span>{' '}
-                  — a one-person development studio focused on building
+                  - a one-person development studio focused on building
                   high-quality digital products for businesses and founders who
                   care about getting it right. My current flagship product is{' '}
                   <span style={{ color: 'var(--cyan-ice)', fontWeight: 500 }}>
                     Gym Buddies
                   </span>
-                  , a social fitness platform for iOS and Android — built from
+                  , a social fitness platform for iOS and Android - built from
                   architecture to launch on the App Store and Google Play.
                 </p>
                 <p
@@ -193,7 +193,7 @@ export default function About() {
                 >
                   When I take on client work, I bring that same ownership
                   mentality. I care about your project the way I care about my
-                  own — clean code, thoughtful UX, honest communication, and a
+                  own - clean code, thoughtful UX, honest communication, and a
                   result you're genuinely proud of. Working with clients
                   worldwide.
                 </p>

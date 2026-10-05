@@ -46,7 +46,7 @@ export default function Booking() {
               margin: '0 auto',
               fontWeight: 300,
             }}>
-              Book a free 30-minute discovery call. No obligation, no sales pitch —
+              Book a free 30-minute discovery call. No obligation, no sales pitch -
               just an honest conversation about what you need and whether I can help.
             </p>
           </div>

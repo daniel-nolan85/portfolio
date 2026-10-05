@@ -94,7 +94,7 @@ export default function Skills() {
                 lineHeight: 1.6,
               }}
             >
-              Six years of building across the full stack — from pixels to
+              Six years of building across the full stack - from pixels to
               production.
             </p>
           </div>

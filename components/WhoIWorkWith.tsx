@@ -8,13 +8,13 @@ const clients = [
     icon: '🚀',
     title: 'Startups & Founders',
     description:
-      'You have an idea and need someone who can build it properly from day one — without burning your runway on bloated agency fees.',
+      'You have an idea and need someone who can build it properly from day one - without burning your runway on bloated agency fees.',
   },
   {
     icon: '🏢',
     title: 'Small Businesses',
     description:
-      "You need a professional online presence that actually works for your business — not a template that looks like everyone else's.",
+      "You need a professional online presence that actually works for your business - not a template that looks like everyone else's.",
   },
   {
     icon: '📱',
@@ -26,7 +26,7 @@ const clients = [
     icon: '🎯',
     title: 'Marketing Teams',
     description:
-      'You need landing pages, campaign sites, or frontend builds delivered fast — without waiting weeks for an internal dev team.',
+      'You need landing pages, campaign sites, or frontend builds delivered fast - without waiting weeks for an internal dev team.',
   },
   {
     icon: '🏗️',

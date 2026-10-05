@@ -28,7 +28,7 @@ const services = [
     title: 'Business Websites',
     tagline: 'Your full online presence, built right.',
     description:
-      'A complete multi-page website for your business — homepage, about, services, contact, and more. Clean, professional, and built to represent your brand and generate enquiries.',
+      'A complete multi-page website for your business - homepage, about, services, contact, and more. Clean, professional, and built to represent your brand and generate enquiries.',
     deliverables: ['Multi-page build', 'Mobile responsive', 'Basic SEO setup', 'Contact forms'],
     timeline: '5–10 days',
     price: 'From $1,500',
@@ -43,7 +43,7 @@ const services = [
     title: 'MVP Development',
     tagline: 'Validate your idea without burning budget.',
     description:
-      'Turn your concept into a working product fast. Authentication, database, core features, and a clean UI — everything you need to get in front of real users and start learning.',
+      'Turn your concept into a working product fast. Authentication, database, core features, and a clean UI - everything you need to get in front of real users and start learning.',
     deliverables: ['Auth & user accounts', 'Core feature set', 'Database & API', 'Deploy-ready'],
     timeline: '2–4 weeks',
     price: 'From $3,000',
@@ -59,7 +59,7 @@ const services = [
     title: 'Mobile Apps',
     tagline: 'iOS & Android, built once, run everywhere.',
     description:
-      'Native-quality mobile apps using React Native and Expo. From social platforms to fitness tools to business utilities — apps your users will actually want to use.',
+      'Native-quality mobile apps using React Native and Expo. From social platforms to fitness tools to business utilities - apps your users will actually want to use.',
     deliverables: ['iOS & Android', 'Push notifications', 'Offline support', 'App Store ready'],
     timeline: '4–8 weeks',
     price: 'From $5,000',
@@ -89,7 +89,7 @@ const services = [
     title: 'Ongoing Support',
     tagline: 'A developer on call, when you need one.',
     description:
-      'Monthly retainers for businesses that need continuous development support — new features, fixes, performance improvements, security updates, and a reliable technical partner.',
+      'Monthly retainers for businesses that need continuous development support - new features, fixes, performance improvements, security updates, and a reliable technical partner.',
     deliverables: ['Dedicated hours/month', 'Priority response', 'Feature development', 'Maintenance & fixes'],
     timeline: 'Monthly rolling',
     price: 'From $500/mo',
@@ -313,7 +313,7 @@ export default function Services() {
               fontWeight: 300,
             }}>
               Book a free 30-minute discovery call and I'll help you figure out
-              exactly what you need — no obligation, no sales pitch.
+              exactly what you need - no obligation, no sales pitch.
             </p>
             <a href='#booking' className='btn-primary' style={{ fontSize: '0.95rem' }}>
               Book a free call
