@@ -10,6 +10,7 @@ type Project = {
   tags: string[];
   liveUrl?: string;
   appStoreUrl?: string;
+  playStoreUrl?: string;
   codeUrls?: { label: string; url: string }[];
   status?: string;
   featured?: boolean;
@@ -54,7 +55,9 @@ const projects: Project[] = [
     ],
     liveUrl: 'https://ellvate.com',
     appStoreUrl: 'https://apps.apple.com/us/app/ellvate/id6805611205',
-    status: 'Live on iOS · Android coming soon',
+    playStoreUrl:
+      'https://play.google.com/store/apps/details?id=com.ellvate.app',
+    status: 'Live on iOS & Android',
     type: 'Mobile App',
   },
   {
@@ -744,6 +747,31 @@ export default function Projects() {
                       }
                     >
                       <ExternalIcon /> App Store
+                    </a>
+                  )}
+                  {project.playStoreUrl && (
+                    <a
+                      href={project.playStoreUrl}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.3rem',
+                        fontSize: '0.78rem',
+                        color: 'var(--cyan-ice)',
+                        textDecoration: 'none',
+                        fontFamily: 'var(--font-mono)',
+                        transition: 'opacity 0.2s',
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.opacity = '0.7')
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.opacity = '1')
+                      }
+                    >
+                      <ExternalIcon /> Google Play
                     </a>
                   )}
                   {project.codeUrls?.map((c) => (
